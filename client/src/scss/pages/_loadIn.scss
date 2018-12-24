@@ -1,0 +1,22 @@
+.gallery-loadIn{
+  @include flex-display(flex, column, space-evenly, 100%);
+
+  @include media(tablet) {
+    @include flex-display(flex, row, space-evenly, 100%);
+    flex-wrap: wrap;
+  }
+  @include media(laptop) {
+
+  }
+
+  .gallery-loadIn__block{
+    margin: 2em 0;
+    @include media(tablet) {
+      width: 40%;
+    }
+    .gallery-loadIn__block--img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

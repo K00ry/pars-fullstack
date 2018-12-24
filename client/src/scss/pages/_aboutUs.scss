@@ -1,0 +1,112 @@
+.history-block{
+
+  .history-block--title{
+    @include font-fam-size( 2.3em, asli, bold, $text-yellow-main );
+
+  }
+  .history-block--p{
+    padding: 1em .5em ;
+    @include font-fam-size( 1em, dovom, bold, $hard-gray );
+
+  }
+}
+
+.feature_holder{
+  padding-top: 2em;
+  padding-bottom: 2em;
+  @include media(desktop) {
+    padding-top: 14em;
+    padding-bottom: 14em;
+  }
+}
+
+.feature{
+  padding: 2em 0;
+
+
+  .feature__block{
+
+
+
+    margin: 0;
+    @include flex-display(flex, column, space-evenly, 100%);
+    @include media(tablet) {
+
+      width: 90%;
+      margin: auto;
+
+    }
+    @include media(laptop) {
+
+      width: 80%;
+
+
+    }
+    .feature__block--img{
+
+      margin: auto;
+      max-width: 100%;
+      height: auto;
+    }
+    .feature__block--title{
+      padding: 0 1em;
+      margin: .5em 0;
+
+
+    }
+    .feature__block--title.farsi{
+      text-align: right;
+      @include font-fam-size( 1.3em, asli, bold, $hard-gray-l );
+      @include media(tablet) {
+        font-size: 1.4em;
+      }
+
+      @include media(laptop) {
+        font-size: 1.6em;
+      }
+
+
+
+    }
+    .feature__block--title.english{
+      @include font-fam-size( 1.3em, $main-font-2, 400, $hard-gray-l );
+      @include media(tablet) {
+        font-size: 1.4em;
+      }
+
+      @include media(laptop) {
+        font-size: 1.6em;
+      }
+
+    }
+    .feature__block--text{
+      padding: 0 1em;
+      margin:  .5em auto;
+    }
+    .feature__block--text.farsi{
+      text-align: right;
+      @include font-fam-size( 1em, dovom, bold, $hard-gray);
+      line-height: 1.5;
+      @include media(tablet) {
+        font-size: 1.2em;
+      }
+
+      @include media(laptop) {
+        font-size: 1.4em;
+      }
+
+    }
+    .feature__block--text.english{
+      @include font-fam-size( 1em, $main-font-1, 300, $hard-gray );
+      line-height: 1.5;
+      @include media(tablet) {
+        font-size: 1.2em;
+      }
+
+      @include media(laptop) {
+        font-size: 1.4em;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,18 @@
+.nav {
+
+    float: right;
+    width: 80%;
+}
+
+.sub-link {
+    display: block;
+    @include font-fam-size( 1em, asli, bold, $body-text);
+    text-align: right;
+    margin: 10px 4px 10px 0;
+}
+
+.nav-sub {
+    display: none;
+    float: right;
+    width: 100%;
+}

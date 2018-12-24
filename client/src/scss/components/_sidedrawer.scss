@@ -1,0 +1,375 @@
+.sidenav {
+
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  //background-color: $hard-gray;
+  background: linear-gradient(132deg, rgba(230, 218, 218, 0.802959) 0%, rgba(39, 64, 70, 0.797356) 0%);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 2em;
+  @include media(iphone-plus) {
+    padding-top: 3em;
+  }
+  @include media(tablet) {
+    padding-top: 5em;
+  }
+
+  &.nav-open {
+    width: 70%;
+    @include media(iphone-plus) {
+
+    }
+    @include media(tablet) {
+      width: 30%;
+    }
+  }
+  ///// style change from right to left on language change \\\\
+  &.english {
+    left: 0;
+    .closebtn {
+      left: .3em;
+      @include media(desktop) {
+        left: .5em;
+        top:.1em
+      }
+    }
+    .sidenav-home {
+      @include flex-display(flex, column, space-between, 100%,left);
+
+      .sidenav-home-btn{
+        margin:.5em 0;
+        @include font-fam-size( 1.8em, $main-font-2, bold, $white);
+        @include media(laptop) {
+          font-size: 3em;
+        }
+      }
+    }
+
+    .nav-link-style {
+      text-decoration: none;
+      @include flex-display(flex, row-reverse, space-between, 100%);
+      @include font-fam-size( 2em, $main-font-2, bold, $white);
+      transition: 0.3s;
+
+      @include media(iphone-plus) {
+        font-size: 2.2em;
+        //margin:.4em 0;
+      }
+      @include media(laptop) {
+        font-size: 3em;
+        margin:.4em 0;
+
+      }
+      .nav-link-style__title{
+       color: $white;
+        @include media(laptop) {
+          font-size: 1em;
+        }
+      }
+      .arrow-style {
+        transform: rotateZ(180deg);
+
+        &.turn {
+          transform-origin: center;
+          transform: rotateZ(270deg);
+        }
+      }
+    }
+  .sideNav-sub__li{
+    text-align: left;
+    .sideNav-sub__li--link {
+
+      margin: .3em 0;
+      @include font-fam-size(1.2em, $main-font-1, 600, $text-yellow-main-l);
+
+      @include media(iphone-plus) {
+        font-size: 1.5em;
+        margin:.4em 0;
+      }
+      @include media(tablet) {
+        font-size: 1.6em;
+      }
+      @include media(laptop) {
+        font-size: 2em;
+      }
+    }
+  }
+    .sidenav-noSub{
+      @include flex-display(flex, column, space-between, 100%);
+      padding: .6em 0;
+      //border-top: 2px solid $text-yellow-main;
+      .sidenav-noSub__Link{
+        text-align: left;
+        margin: auto 0 ;
+        .sidenav-noSub__Link--font{
+          @include font-fam-size( 1.3em, $main-font-2, bold, $white);
+          @include media(iphone-plus) {
+            font-size: 1.5em;
+          }
+
+          @include media(tablet) {
+            font-size: 2.2em;
+          }
+          @include media(laptop) {
+            font-size: 2.5em;
+          }
+
+        }
+      }
+    }
+  }
+  &.farsi {
+    right: 0;
+
+    .closebtn {
+      right:.3em;
+      @include media(desktop) {
+        right: .5em;
+        top:.1em
+      }
+    }
+    .sidenav-home {
+      @include flex-display(flex, column, space-between, 100%, right);
+
+      .sidenav-home-btn {
+        text-align: right;
+        @include font-fam-size(1.7em, asli, bold, $white);
+        margin:.5em 0;
+        @include media(laptop) {
+          font-size: 3em;
+        }
+      }
+    }
+    .nav-link-style__title{
+      font-size: 1em;
+      @include media(laptop) {
+        font-size: .9em;
+      }
+    }
+    .nav-link-style {
+      //margin: 1rem 0;
+      text-decoration: none;
+      @include flex-display(flex, row, space-between, 100%);
+      transition: 0.3s;
+      //margin: .2em 0;
+      @include media(iphone-plus) {
+        font-size: 2.2em;
+        margin: .3em 0;
+      }
+      @include media(laptop) {
+        font-size: 4em;
+        margin:.4em 0;
+
+      }
+
+      .turn {
+        transform-origin: center;
+        transform: rotateZ(-90deg);
+      }
+
+    }
+    .sideNav-sub__li {
+      @include flex-display(flex, column, space-between, 100%);
+      border-top: 1px solid $white;
+      text-align: right;
+
+
+      .sideNav-sub__li--link {
+        margin: auto 0;
+
+
+        @include font-fam-size(1.2em, dovom-bold, bold, $text-yellow-main-l);
+        //margin: .4em 0;
+
+        @include media(iphone-plus) {
+          font-size: 1.5em;
+        }
+        @include media(laptop) {
+          font-size: 2em;
+        }
+      }
+    }
+
+    .sidenav-noSub{
+     padding: .6em 0 ;
+      //border-top: 2px solid $text-yellow-main;
+      @include flex-display(flex, column, space-between, 100%);
+
+      .sidenav-noSub__Link{
+        margin: auto 0;
+        text-align: right;
+        .sidenav-noSub__Link--font{
+          @include font-fam-size( 1.3em, asli, bold, $white);
+          @include media(iphone-plus) {
+            font-size: 1.5em;
+          }
+
+          @include media(tablet) {
+            font-size: 2.2em;
+          }
+          @include media(laptop) {
+            font-size: 2.5em;
+          }
+        }
+      }
+    }
+  }
+
+///////////// Shared styles between languages \\\\\\\\\\\\\
+
+  .sideNav-title {
+    width: 100%;
+    padding: 1em;
+    .sidenav-li-drop{
+      @include flex-display(flex, column, space-between, 100%, center);
+    }
+    //.sidenav-noSub:last-child{
+    //  border-bottom: 2px solid $text-yellow-main;
+    //}
+
+
+  }
+
+
+  .nav-link {
+    @include font-fam-size(1.3em, asli, bold, $text-black-m);
+  }
+
+  .expand{
+    max-height: 30em;
+    width: 90%;
+
+    @include media(laptop) {
+      max-height: 50em;
+    }
+  }
+
+
+  .closebtn {
+    position: absolute;
+    top: -20px;
+    font-size: 4em;
+    color: $text-yellow-main-l;
+    @include media(laptop) {
+      font-size: 6em;
+    }
+
+  }
+}
+
+
+
+
+
+.head-intro-sub {
+  height: 0;
+  width: 100%;
+  position: relative;
+  z-index: 100000;
+  background-color: #000;
+  transition: 0.5s;
+}
+
+.sidenav-home-btn {
+  //farsi
+  @include font-fam-size(2em, asli, 200, $white );
+  padding: .5em 0;
+}
+
+.sidenav-li-drop {
+  .nav-link-style {
+
+    @include font-fam-size(2em, asli, 200, $color: $white);
+    .nav-link-style__title{
+      color: $white;
+
+    }
+
+
+
+    ///// arrow turns down main styles \\\\
+
+
+    .arrow-style {
+      width: .6em;
+      height: .6em;
+      transition: all 0.3s;
+      @include media(iphone-plus) {
+        width: .8em;
+        height: .8em;
+      }
+
+      @include media(laptop) {
+
+      }
+    }
+
+    .arrow-style-sub {
+      width: 15px;
+      height: 15px;
+      transition: all 0.3s;
+    }
+  }
+
+  .sideNav-sub {
+padding: 0;
+    @include flex-display(flex, column, space-between, 100%, center);
+    .sideNav-sub__li {
+
+      padding: .5em 0 ;
+      list-style: none;
+      width: 100%;
+    }
+  }
+}
+
+.nav-link-no-sub {
+  text-align: right;
+  @include font-fam-size(1.4em, asli, 100, $text-yellow-main-l);
+}
+
+.nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  @include media(tablet) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.nav-sub-container {
+  display: none;
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+  color: #f1f1f1;
+}
+
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.slidedown-nav {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+
+}

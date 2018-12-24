@@ -1,0 +1,136 @@
+.contact {
+  @include flex-display(flex,
+          column,
+          space-between,
+          100%,
+          center);
+  background-color: $background-White;
+
+  .top-nav {
+    margin: auto;
+    width: 90%;
+    padding: 1em 0;
+    border-bottom: 2px solid $light-grey;
+    text-align: center;
+    @include media(tablet) {
+      padding: 2em 0;
+    }
+    #back-to-top {
+      @include font-fam-size( 1em,
+              asli,
+              bold,
+              $hard-gray);
+      @include media(tablet) {
+        font-size:1.3em;
+      }
+      @include media(laptop) {
+        font-size: 1.5em;
+      }
+
+      .contact-arrow{
+
+        max-width: 100%;
+        width: .7em;
+        height: auto;
+        transform: rotateZ(90deg);
+      }
+    }
+  }
+  //.contact-fa {
+  //  width: 90%;
+  //  margin: auto;
+  //
+  //  font-family: asli;
+  //  padding: 30px 0;
+  //  text-align: center;
+    .contact-fa {
+      padding: 2em 0;
+      color: $hard-gray-l;
+      @include media(tablet) {
+        padding: 2em 0;
+        display:flex;
+        justify-content: space-between;
+
+      }
+      
+
+.contact-fa__line{
+  @include media(tablet) {
+    text-align: center;
+  }
+}
+    }
+  .contact-fa__line--h5 {
+      @include font-fam-size( 1.2em,
+              asli,
+              bold,
+              $hard-gray );
+      @include media(tablet) {
+        font-size:1.6em;
+      }
+      @include media(laptop) {
+        font-weight: 500;
+
+      }
+    }
+    .contact-fa__line--a{
+      @include font-fam-size( 1.2em,
+              dovom-bold,
+              400,
+              $hard-gray-l);
+      @include media(tablet) {
+        font-size:1.6em;
+      }
+      @include media(laptop) {
+        //font-size: 2.3em;
+      }
+
+    }
+  //}
+
+  .contact-en {
+    padding: 2em 0;
+    color: $hard-gray-l;
+    @include media(tablet) {
+      padding: 2em 0;
+      display:flex;
+      justify-content: space-between;
+
+    }
+
+    .contact-en__line{
+      @include media(tablet) {
+        text-align: center;
+      }
+    }
+  }
+  .contact-en__line--h5 {
+    @include font-fam-size( 1.2em,
+            $main-font-2,
+            600,
+            $hard-gray);
+    @include media(tablet) {
+      font-size:1.6em;
+    }
+    @include media(laptop) {
+      font-weight: 500;
+      //font-size: 2.3em;
+    }
+  }
+  .contact-en__line--a{
+    @include font-fam-size( 1.2em,
+            $main-font-2,
+            400,
+            $hard-gray-l );
+    @include media(tablet) {
+      font-size:1.6em;
+    }
+    @include media(laptop) {
+      font-weight: 300;
+      //font-size: 2.3em;
+    }
+
+  }
+
+}
+
