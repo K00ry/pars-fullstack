@@ -10,6 +10,7 @@
     "react": "^16.6.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-bootstrap": "^0.32.4",
+    "react-data-fetching": "^0.2.4",
     "react-dom": "^16.6.0",
     "react-headroom": "^2.2.4",
     "react-i18next": "^7.13.0",

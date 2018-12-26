@@ -4,7 +4,10 @@ import { translate} from "react-i18next";
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import ScrollTrigger from 'scrolltrigger-classes';
 import {Col, Grid, Row} from "react-bootstrap";
-import data from './data';
+// import data from './data';
+
+// to use later for fetching in render props
+// import { Fetch } from 'react-data-fetching'
 import Toolbar from './components/toolbar/toolbar';
 import SideDrawer from './components/sidedrawer/sidedrawer';
 import MainContainer from './components/mainContainer/mainContainer';
@@ -26,9 +29,9 @@ class App extends Component {
 
   state = {
     openDrawer : false,
-      mainData: data,
-      CatalogData: data[0],
-      CatalogSpec:data[0][0],
+      mainData: [],
+      CatalogData: [],
+      CatalogSpec: [],
       catalogMount:false
   };
   openDrawer = () => {
@@ -43,17 +46,21 @@ class App extends Component {
         })
 
     };
+
+
+
     componentDidMount(){
+        fetch('/users').then(res=>res.json()).then(response => {
+            this.setState({
+                mainData: response,
+                CatalogData: response[0],
+                CatalogSpec:response[0][0],
+            });
+        });
+
         document.addEventListener('DOMContentLoaded', function(){
             let trigger = new ScrollTrigger();
-            console.log(trigger);
         });
-        fetch('/users').then(res=>res.json()).then(response => {
-            // this.setState({
-            //     kososher:response,
-            // });
-            console.log(response);
-        })
 
     }
 
@@ -112,6 +119,7 @@ class App extends Component {
                       render={()=> <AboutUs t={this.props.t}/>} />
               <Route  exact path="/contact"
                       render={()=> <ContactPage t={this.props.t}/>} />
+
 
               {catalogRouts}
 

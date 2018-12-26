@@ -6,6 +6,7 @@ app.set("port", 5000);
 app.get("/", (req, res) => {
     res.send("Welcome to Node + Express API");
 });
+
 const DATA = [
     [
         {
