@@ -48,6 +48,12 @@ class App extends Component {
             let trigger = new ScrollTrigger();
             console.log(trigger);
         });
+        fetch('/users').then(res=>res.json()).then(response => {
+            // this.setState({
+            //     kososher:response,
+            // });
+            console.log(response);
+        })
 
     }
 
