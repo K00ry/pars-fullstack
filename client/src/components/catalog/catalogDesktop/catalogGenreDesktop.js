@@ -5,7 +5,7 @@ import HomeGenres from './homeGenres';
 
 const CatalogGenreDesktop = props => {
     // const small = process.env.PUBLIC_URL + 'images/sizeset/new/intro-mob.jpg';
-    console.log(props.mainData);
+
   return (
       <div className="desktop-sideGenre">
 

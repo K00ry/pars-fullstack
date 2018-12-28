@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 
-app.set("port", 5000);
+// app.set("port", 5000);
 app.get("/", (req, res) => {
     res.send("Welcome to Node + Express API");
 });
@@ -112,7 +112,7 @@ const DATA = [
                 },
                 {
                     image: '#',
-                    type: 'تیغه ۱۰ پوکه',
+                    type: 'تیغه ۱۰ پوکه فروه',
                     size: '۴۰*۲۰*۱۰',
                     price: '۹۳۵۰',
                     shipping: '۵۰۰',
@@ -793,6 +793,4 @@ app.get("/users", (req, res) => {
     res.send(DATA);
 });
 
-app.listen(app.get("port"), () => {
-    console.log("Node app is running on port", app.get("port"));
-});
+app.listen(process.env.PORT || 5000);

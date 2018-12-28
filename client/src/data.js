@@ -103,7 +103,7 @@ const data = [
                 },
                 {
                   image: '#',
-                  type: 'تیغه ۱۰ پوکه',
+                  type: 'تیغه ۱۰ پوکه فروه',
                   size: '۴۰*۲۰*۱۰',
                   price: '۹۳۵۰',
                   shipping: '۵۰۰',
