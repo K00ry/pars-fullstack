@@ -7,7 +7,7 @@
     "i18next-browser-languagedetector": "^2.2.3",
     "jquery": "^3.3.1",
     "node-sass": "^4.9.4",
-    "react": "^16.6.0",
+    "react": "^16.7.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-bootstrap": "^0.32.4",
     "react-data-fetching": "^0.2.4",
@@ -33,5 +33,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {}
 }

@@ -1,8 +1,10 @@
 var express = require('express');
+const path = require('path');
 var app = express();
 
 
-app.set("port", 5000);
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 app.get("/", (req, res) => {
     res.send("Welcome to Node + Express API");
 });
@@ -112,7 +114,7 @@ const DATA = [
                 },
                 {
                     image: '#',
-                    type: 'تیغه ۱۰ پوکه',
+                    type: 'تیغه ۱۰ پوکه فروه',
                     size: '۴۰*۲۰*۱۰',
                     price: '۹۳۵۰',
                     shipping: '۵۰۰',
@@ -792,7 +794,8 @@ const DATA = [
 app.get("/users", (req, res) => {
     res.send(DATA);
 });
-
-app.listen(app.get("port"), () => {
-    console.log("Node app is running on port", app.get("port"));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
+
+app.listen(process.env.PORT || 5000);
