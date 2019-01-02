@@ -5,6 +5,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Col, Grid, Row } from "react-bootstrap";
 import { Consumer } from "./components/context";
 import Toolbar from "./components/toolbar/toolbar";
+import Admin from "./components/admin/admin";
 import SideDrawer from "./components/sidedrawer/sidedrawer";
 import MainContainer from "./components/mainContainer/mainContainer";
 import Catalog from "./components/catalog/catalog";
@@ -56,6 +57,11 @@ const App = props => (
                       exact
                       path="/"
                       render={() => <MainContainer t={props.t} />}
+                    />
+                    <Route
+                      exact
+                      path="/admin"
+                      render={() => <Admin t={props.t} />}
                     />
 
                     <Route

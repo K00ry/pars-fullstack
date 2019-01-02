@@ -18,10 +18,12 @@
     "concurrently": "^4.1.0",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.4",
+    "mongoose": "^5.4.1",
     "path": "^0.12.7",
     "pug": "^2.0.3"
   },
   "devDependencies": {
+    "morgan": "^1.9.1",
     "nodemon": "^1.18.9",
     "prettier": "^1.15.3"
   }
