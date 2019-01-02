@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import {Redirect} from 'react-router-dom';
 
-import CatalogGenre from './catalogGenre';
-import ImgAndTable from './imgAndTable/imgAndTable';
-import ImgGallery from './imgGallery/imgGallery';
-import CatalogGenreDesktop from './catalogDesktop/catalogGenreDesktop';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import CatalogGenre from "./catalogGenre";
+import ImgAndTable from "./imgAndTable/imgAndTable";
+import ImgGallery from "./imgGallery/imgGallery";
+import CatalogGenreDesktop from "./catalogDesktop/catalogGenreDesktop";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 class Catalog extends Component {
   state = {
-    subLinkClass: 1,
+    subLinkClass: 1
   };
+  // determine which sub category should be viewed
 
   isActive = index => {
     return this.state.subLinkClass === index;
@@ -19,35 +20,31 @@ class Catalog extends Component {
   setActiveTab = index => {
     this.setState({ subLinkClass: index });
   };
-
-  componentDidMount(){
-   this.props.mountToggle();
+  // get rid of extra space for navigation on header for UI purposes.
+  componentDidMount() {
+    this.props.mountToggle();
   }
-
-    componentWillUnmount(){
-        this.props.mountToggle();
-    }
-
+  // getting the correct index of the product from URL of the router before component Mounts so it shows the correct product
   componentWillMount() {
-
     let rightIndex = this.props.location.pathname.charAt(1);
-
     this.setState({
-
       prodData: this.props.mainOfMain[rightIndex],
-      ProdSpec: this.props.mainOfMain[rightIndex][1],
+      ProdSpec: this.props.mainOfMain[rightIndex][1]
     });
+    this.props.mountToggle();
   }
-
+  //setting the correct index to view the sub category
   subGenreView = chosen => {
     this.setState({
-      ProdSpec: this.state.prodData[chosen],
+      ProdSpec: this.state.prodData[chosen]
     });
   };
 
   render() {
+    // Conditionally rendering different components for gallery with a table or simply images
+
     let galleryType =
-      this.state.ProdSpec.genreEn !== 'kafpoosh' ? (
+      this.state.ProdSpec.genreEn !== "kafpoosh" ? (
         <ImgAndTable
           key={this.state.ProdSpec.genreId}
           img={this.state.ProdSpec.img}
@@ -67,6 +64,7 @@ class Catalog extends Component {
     return (
       <div className="main">
         <div className="catalog-body">
+          {/*this component belongs only fo desktop view*/}
           <CatalogGenreDesktop
             mainData={this.props.mainOfMain}
             t={this.props.t}
@@ -74,7 +72,7 @@ class Catalog extends Component {
 
           <div className="catalog-function">
             <div
-              className={`catalog-header-${this.props.t('lang-class')}`}
+              className={`catalog-header-${this.props.t("lang-class")}`}
               key={this.state.ProdSpec.genreFarsi}
             >
               <div className="catalog-header__title">

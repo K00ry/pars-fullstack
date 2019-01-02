@@ -1,27 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import data from '../../data';
+import {Consumer} from "../context";
 
 const Sublinks = props =>
 
-
-
-        <li
+    <Consumer>{
+        ({actions})=>
+            <li
             className="sideNav-sub__li"
-            onClick={()=>{
-                // props.correctCatalogClick();
-            props.closeNav()} }
-        >
+            onClick={actions.handleOpeningDrawer}>
             <Link  to={props.address} className="sideNav-sub__li--link">{props.t(props.product)}</Link>
-        </li>;
+        </li>
+
+    }</Consumer>;
 
 
 
-
-
-//   return (<ul className="sideNav-sub">
-//       {jaber}
-//       </ul>);
-// };
 
 export default Sublinks;

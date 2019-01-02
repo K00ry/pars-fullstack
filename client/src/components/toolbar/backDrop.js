@@ -1,17 +1,22 @@
 import React from 'react';
+import {Consumer} from "../context";
 
-const BackDrop = props => {
+const BackDrop = () => {
 
-    let back_drop= 'backDrop-invisible';
-
-    if (props.show) {
-        back_drop = 'backDrop-visible';
-
-    }
-    return (<div className={back_drop}
-                 onClick={props.openDrawer}
-    />)
-
+    return (
+        <Consumer>{
+            ({actions,openDrawer}) => {
+                let back_drop = 'backDrop-invisible';
+                if (openDrawer) {
+                    back_drop = 'backDrop-visible';
+                }
+                return(
+                    <div className={back_drop} onClick={actions.handleOpeningDrawer}/>
+                );
+              }
+            }
+        </Consumer>
+    )
 };
 
 
