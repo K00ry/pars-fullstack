@@ -5,6 +5,7 @@ const Product = require("../models").KerbStone;
 router.get("/", (req, res, next) => {
   Product.find({}, (err, products) => {
     if (err) return next(err);
+    else console.log("product saved!");
     res.json(products);
   });
 });
@@ -22,11 +23,18 @@ router.get("/admin", (req, res) => {
 const dool = { kososher: "kirekhar" };
 
 router.post("/admin", (req, res) => {
-  Product.save();
-  Product.find({}, (err, products) => {
-    if (err) return next(err);
-    res.json(products);
-  });
+  let jaber = req.body;
+  res.json(jaber);
+
+  // Product.save((err, product) => {
+  //   if (err) console.log("Error", err);
+  //   else console.log("product saved!");
+  //   res.json(product);
+  // });
+  // Product.find({}, (err, products) => {
+  //   if (err) return next(err);
+  //
+  // });
 });
 
 const DATA = [
