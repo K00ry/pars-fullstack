@@ -203,7 +203,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$USER_HOME$/.nvm/versions/node/v9.8.0/lib/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -245,16 +245,15 @@
       <workItem from="1545609699458" duration="3981000" />
       <workItem from="1545634531200" duration="87000" />
       <workItem from="1545634655120" duration="24746000" />
-      <workItem from="1546230075196" duration="51910000" />
+      <workItem from="1546230075196" duration="52070000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80724000" />
+    <option name="totallyTimeSpent" value="80884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="24" width="1367" height="801" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17087667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
