@@ -33,10 +33,11 @@ var sampleProduct = new KerbStone({
     }
   ]
 });
-sampleProduct.save((err, product) => {
-  if (err) console.log("Error", err);
-});
-KerbStone.deleteOne({}, err => {
+// sampleProduct.save((err, product) => {
+//   if (err) console.log("Error", err);
+//   else console.log("product saved!");
+// });
+KerbStone.deleteMany({}, err => {
   if (err) console.log("Error", err);
 });
 
