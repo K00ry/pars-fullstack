@@ -23,14 +23,14 @@ router.get("/admin", (req, res) => {
 const dool = { kososher: "kirekhar" };
 
 router.post("/admin", (req, res) => {
-  let jaber = req.body;
-  res.json(jaber);
+  console.log(req.body);
+  let jaber = new Product(req.body);
 
-  // Product.save((err, product) => {
-  //   if (err) console.log("Error", err);
-  //   else console.log("product saved!");
-  //   res.json(product);
-  // });
+  jaber.save((err, product) => {
+    if (err) console.log("Error", err);
+    else console.log("product saved!");
+    res.json(product);
+  });
   // Product.find({}, (err, products) => {
   //   if (err) return next(err);
   //
