@@ -8,8 +8,7 @@ import SelectInput from "./selectInput";
 class Admin extends Component {
   state = {
     genreEn: " ",
-    genreId: " ",
-    sizes: []
+    genreId: " "
   };
 
   // handleSubmit func cant set the state value for post request value unless you bind (this) with constructor ^
@@ -21,7 +20,13 @@ class Admin extends Component {
   handleSubmit(e) {
     e.preventDefault();
     axios
-      .post("/admin", JSON.stringify(this.state))
+      .post(
+        "/admin",
+        // JSON.stringify(
+        this.state
+
+        // )
+      )
       .then(response => {
         console.log(response.data);
       })
@@ -29,6 +34,11 @@ class Admin extends Component {
         console.log("this is error", error);
       });
   }
+
+  // componentDidMount() {
+  //   console.log(this.state);
+  // }
+
   //  set the val of the form input as  the state of  the component for sending a post req to the api
 
   onSelectInput = e => {
@@ -113,7 +123,12 @@ class Admin extends Component {
       );
     }
     return (
-      <form method="POST" onSubmit={this.handleSubmit} className="admin-form">
+      <form
+        method="POST"
+        action="/admin"
+        onSubmit={this.handleSubmit}
+        className="admin-form"
+      >
         <fieldset>
           <legend>Hi Kasra</legend>
           <br />
