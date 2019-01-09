@@ -1,5 +1,6 @@
 var express = require("express");
-var routes = require("./routes/routes");
+const mainRoutes = require("./routes");
+var KerbStoneroutes = require("./routes/kerbStone");
 const path = require("path");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -30,7 +31,8 @@ db.once("open", () => {
   console.log("DB connection successful!");
 });
 
-app.use("/", routes);
+app.use("/", mainRoutes);
+app.use("/admin", KerbStoneroutes);
 
 app.use((req, res, next) => {
   const err = new Error("Not Found");

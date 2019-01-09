@@ -19,14 +19,10 @@ class Admin extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    axios
-      .post(
-        "/admin",
-        // JSON.stringify(
-        this.state
 
-        // )
-      )
+    let url = "/admin/" + this.state.genreEn;
+    axios
+      .post(url, this.state)
       .then(response => {
         console.log(response.data);
       })
@@ -35,9 +31,16 @@ class Admin extends Component {
       });
   }
 
-  // componentDidMount() {
-  //   console.log(this.state);
-  // }
+  componentDidMount() {
+    axios
+      .get("/admin")
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.log("this is error", error);
+      });
+  }
 
   //  set the val of the form input as  the state of  the component for sending a post req to the api
 
@@ -94,11 +97,11 @@ class Admin extends Component {
 
   render() {
     let rightForm;
-    let stateOfProduct = this.state.selectedProduct;
+    let stateOfProduct = this.state.genreEn;
     if (
-      stateOfProduct === "jadval" ||
-      stateOfProduct === "dal" ||
-      stateOfProduct === "kaval"
+      stateOfProduct === "kerbStone" ||
+      stateOfProduct === "slabs" ||
+      stateOfProduct === "rings"
     ) {
       rightForm = (
         <KerbStoneRingsSlabsForm
