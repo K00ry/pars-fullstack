@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const KerbSchema = require("../models/kerbStone").KerbStone;
+const BlockSchema = require("../models/blocks").Blocks;
 
 router.get("/", (req, res, next) => {
-  KerbSchema.findOne({ genreId: "hand" })
+  BlockSchema.find({})
     .exec()
     .then(kerbs => {
-      console.log(kerbs);
+      // console.log(kerbs);
       // kerbs.sizes[3].remove();
       // kerbs.save();
       res.status(200).json(kerbs);
@@ -17,14 +17,13 @@ router.get("/", (req, res, next) => {
     });
 });
 
-router.post("/kerbStone", (req, res) => {
-  console.log(req.body);
-
-  KerbSchema.findOne({ genreId: req.body.genreId })
+router.post("/blocks", (req, res) => {
+  BlockSchema.findOne({ genreId: req.body.genreId })
     .exec()
     .then(kerbs => {
       kerbs.sizes.push({
         type: req.body.type,
+        size: req.body.size,
         price: req.body.price,
         shipping: req.body.shipping
       });

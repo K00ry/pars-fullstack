@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import Blocks from "./blocks";
 import KerbStoneRingsSlabsForm from "./kerbStonekavalForm";
 import PaversMosaicsForm from "./paversMosaicsForm";
 import SelectInput from "./selectInput";
@@ -63,6 +63,11 @@ class Admin extends Component {
       type: e.target.value
     });
   };
+  onSizeInput = e => {
+    this.setState({
+      size: e.target.value
+    });
+  };
   onPriceInput = e => {
     this.setState({
       price: e.target.value
@@ -114,6 +119,15 @@ class Admin extends Component {
           onShippingInput={this.onShippingInput}
         />
       );
+    } else if (stateOfProduct === "blocks") {
+      rightForm = (
+        <Blocks
+          onTypeInput={this.onTypeInput}
+          onSizeInput={this.onSizeInput}
+          onPriceInput={this.onPriceInput}
+          onShippingInput={this.onShippingInput}
+        />
+      );
     } else if (stateOfProduct === " ") {
       rightForm = null;
     } else {
@@ -131,8 +145,6 @@ class Admin extends Component {
     }
     return (
       <div className="admin-page-container">
-        <h1>{this.state.message}</h1>
-
         <form
           method="POST"
           action="/admin"
@@ -155,6 +167,8 @@ class Admin extends Component {
           <br />
           <button type="submit">SUBMIT!</button>
         </form>
+
+        <h1>{this.state.message}</h1>
       </div>
     );
   }
