@@ -7,6 +7,7 @@ import SelectInput from "./selectInput";
 
 class Admin extends Component {
   state = {
+    message: "Please enter product description",
     genreEn: " ",
     genreId: " "
   };
@@ -24,6 +25,9 @@ class Admin extends Component {
     axios
       .post(url, this.state)
       .then(response => {
+        this.setState({
+          message: response.data.message
+        });
         console.log(response.data);
       })
       .catch(error => {
@@ -61,37 +65,37 @@ class Admin extends Component {
   };
   onPriceInput = e => {
     this.setState({
-      PriceEntered: e.target.value
+      price: e.target.value
     });
   };
   onShippingInput = e => {
     this.setState({
-      ShippingEntered: e.target.value
+      shipping: e.target.value
     });
   };
   onImgInput = e => {
     this.setState({
-      imgEntered: e.target.value
+      img: e.target.value
     });
   };
   onSquareFeetInput = e => {
     this.setState({
-      squareFeetEntered: e.target.value
+      inSquarefeet: e.target.value
     });
   };
   onGreyInput = e => {
     this.setState({
-      greyEntered: e.target.value
+      toosi: e.target.value
     });
   };
   onYellowInput = e => {
     this.setState({
-      yellowEntered: e.target.value
+      yellowmix: e.target.value
     });
   };
   onRedInput = e => {
     this.setState({
-      redEntered: e.target.value
+      red: e.target.value
     });
   };
 
@@ -126,28 +130,32 @@ class Admin extends Component {
       );
     }
     return (
-      <form
-        method="POST"
-        action="/admin"
-        onSubmit={this.handleSubmit}
-        className="admin-form"
-      >
-        <fieldset>
-          <legend>Hi Kasra</legend>
-          <br />
-          <label htmlFor="select">Product to add</label>
-          <br />
-          <br />
-          <SelectInput onSelectInput={this.onSelectInput} />
-          <br />
-        </fieldset>
+      <div className="admin-page-container">
+        <h1>{this.state.message}</h1>
 
-        {rightForm}
+        <form
+          method="POST"
+          action="/admin"
+          onSubmit={this.handleSubmit}
+          className="admin-form"
+        >
+          <fieldset>
+            <legend>Hi Kasra</legend>
+            <br />
+            <label htmlFor="select">Product to add</label>
+            <br />
+            <br />
+            <SelectInput onSelectInput={this.onSelectInput} />
+            <br />
+          </fieldset>
 
-        <br />
-        <br />
-        <button type="submit">SUBMIT!</button>
-      </form>
+          {rightForm}
+
+          <br />
+          <br />
+          <button type="submit">SUBMIT!</button>
+        </form>
+      </div>
     );
   }
 }

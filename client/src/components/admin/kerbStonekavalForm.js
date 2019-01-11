@@ -4,7 +4,7 @@ const KerbStoneRingsSlabsForm = props => {
   return (
     <>
       <br />
-      <label htmlFor="type">Type</label>
+      <label htmlFor="Type">Type</label>
       <br />
       <input
         onChange={props.onTypeInput}
@@ -16,13 +16,13 @@ const KerbStoneRingsSlabsForm = props => {
       <br />
 
       <br />
-      <label htmlFor="squareFeet">In Square feet</label>
+      <label htmlFor="Price">Price</label>
       <br />
       <input
         onChange={props.onPriceInput}
         type="text"
-        id="squareFeet"
-        name="squareFeet"
+        id="price"
+        name="price"
         placeholder="..."
       />
       <br />

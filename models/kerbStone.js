@@ -3,10 +3,15 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
+// var sizeSchema = new Schema({
+//   type: { type: String, default: "۲۳" },
+//   price: { type: String, default: "۲۳" },
+//   shipping: { type: String, default: "۲۳" }
+// });
 var sizeSchema = new Schema({
-  type: { type: String, default: "۲۳" },
-  price: { type: String, default: "۲۳" },
-  shipping: { type: String, default: "۲۳" }
+  type: { type: String, required: true },
+  price: { type: String, required: true },
+  shipping: { type: String, required: true }
 });
 
 // var ProductSchema = new Schema({
