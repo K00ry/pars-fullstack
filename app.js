@@ -1,11 +1,13 @@
 var express = require("express");
 const mainRoutes = require("./routes");
-var KerbStoneroutes = require("./routes/kerbStone");
+const KerbStoneroutes = require("./routes/kerbStone");
+const Blocks = require("./routes/blocks");
 const path = require("path");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
-var app = express();
-var logger = require("morgan");
+
+const app = express();
+const logger = require("morgan");
 
 app.use(logger("dev"));
 app.use(bodyParser.json());
@@ -33,6 +35,7 @@ db.once("open", () => {
 
 app.use("/", mainRoutes);
 app.use("/admin", KerbStoneroutes);
+// app.use("/admin", Blocks);
 
 app.use((req, res, next) => {
   const err = new Error("Not Found");
