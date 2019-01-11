@@ -1,41 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const Product = require("../models").KerbStone;
-
-router.get("/", (req, res, next) => {
-  Product.find({}, (err, products) => {
-    if (err) return next(err);
-    else console.log("product saved!");
-    res.json(products);
-  });
-});
-
-router.get("/admin", (req, res) => {
-  res.render("index");
-});
 
 // router.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname + "/client/build/index.html"));
 // });
-router.get("/admin", (req, res) => {
-  res.render("index");
-});
-const dool = { kososher: "kirekhar" };
-
-router.post("/admin", (req, res) => {
-  let jaber = req.body;
-  res.json(jaber);
-
-  // Product.save((err, product) => {
-  //   if (err) console.log("Error", err);
-  //   else console.log("product saved!");
-  //   res.json(product);
-  // });
-  // Product.find({}, (err, products) => {
-  //   if (err) return next(err);
-  //
-  // });
-});
 
 const DATA = [
   [

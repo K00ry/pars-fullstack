@@ -1,4 +1,4 @@
-const data = [
+const DATA = [
   [
     {
       genreEn: "jadval",
@@ -252,7 +252,9 @@ const data = [
         {
           img: "/images/kafpoosh/wetpress/yellow.png",
           type: "۵۰*۵۰*۸",
+
           inSquarefeet: "۴ عدد",
+
           toosi: "۲۵۰۰۰۰",
           red: "۳۰۰۰۰۰",
           yellowmix: "۳۵۰۰۰۰",
@@ -280,7 +282,9 @@ const data = [
         {
           img: "/images/kafpoosh/mobile/transparent/i.png",
           type: "آی خشک چین",
+
           inSquarefeet: "۲۳ عدد",
+
           toosi: "۱۲۵۰۰۰",
           red: "۱۴۵۰۰۰",
           yellowmix: "۱۷۵۰۰۰",
@@ -773,4 +777,4 @@ const data = [
     }
   ]
 ];
-export default data;
+export default DATA;
