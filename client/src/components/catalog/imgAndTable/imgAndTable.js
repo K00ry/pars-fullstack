@@ -11,7 +11,13 @@ const ImgAndTable = props => {
   } else if (props.check === "mobleman") {
     abbas = <TableWithModel tableSizes={props.tableSizes} t={props.t} />;
   } else {
-    abbas = <TableWithPrice tableSizes={props.tableSizes} t={props.t} />;
+    abbas = (
+      <TableWithPrice
+        check={props.check}
+        tableSizes={props.tableSizes}
+        t={props.t}
+      />
+    );
   }
 
   return (

@@ -18,6 +18,20 @@ const KerbSchema = require("../models/kerbStone").KerbStone;
 //     });
 // });
 
+router.get("/kerbStone", (req, res, next) => {
+  KerbSchema.find()
+    .exec()
+    .then(block => {
+      console.log(block);
+
+      res.status(200).json(block);
+    })
+    .catch((err, prod) => {
+      console.log(err);
+      res.status(500).json(prod);
+    });
+});
+
 router.post("/kerbStone", (req, res) => {
   console.log(req.body);
 

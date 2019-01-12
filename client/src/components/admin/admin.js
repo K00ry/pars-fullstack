@@ -12,7 +12,8 @@ class Admin extends Component {
     message: "Please enter product description",
     genreEn: " ",
     genreId: " ",
-    FromServer: []
+    FromServer: [],
+    addedToDB: []
   };
 
   // handleSubmit func cant set the state value for post request value unless you bind (this) with constructor ^
@@ -29,7 +30,7 @@ class Admin extends Component {
       .post(url, this.state)
       .then(response => {
         this.setState({
-          FromServer: response.data
+          addedToDB: response.data
         });
 
         console.log(response.data);
@@ -51,7 +52,22 @@ class Admin extends Component {
       });
   }
 
-  //  set the val of the form input as  the state of  the component for sending a post req to the api
+  /// useful callback function to request for showing data from database in to the table
+  dataFetchCall = productName => {
+    let url = "/admin/" + productName;
+    axios
+      .get(url)
+      .then(response => {
+        console.log(response.data);
+        this.setState({
+          FromServer: response.data
+        });
+      })
+      .catch(error => {
+        console.log("this is error", error);
+      });
+  };
+  //  set the value of the form input as the state of the component and sending a post req to the api in callback
 
   onSelectInput = e => {
     let op = e.target.options[e.target.selectedIndex];
@@ -62,20 +78,7 @@ class Admin extends Component {
         genreEn: optGroupName,
         genreId: e.target.value
       },
-      () => {
-        let url = "/admin/" + this.state.genreEn;
-        axios
-          .get(url)
-          .then(response => {
-            console.log(response.data);
-            this.setState({
-              FromServer: response.data
-            });
-          })
-          .catch(error => {
-            console.log("this is error", error);
-          });
-      }
+      () => this.dataFetchCall(this.state.genreEn)
     );
 
     // let url = "/admin/" + this.state.genreEn;
@@ -202,10 +205,8 @@ class Admin extends Component {
           <br />
           <button type="submit">SUBMIT!</button>
         </form>
-
+        <h1 className="status">{this.state.message}</h1>
         <TableWithPrice t={this.props.t} fromServer={this.state.FromServer} />
-
-        <h1>{this.state.message}</h1>
       </div>
     );
   }

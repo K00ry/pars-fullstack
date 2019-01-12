@@ -24,6 +24,9 @@ class Catalog extends Component {
   componentDidMount() {
     this.props.mountToggle();
   }
+  componentWillUnmount() {
+    this.props.mountToggle();
+  }
   // getting the correct index of the product from URL of the router before component Mounts so it shows the correct product
   componentWillMount() {
     let rightIndex = this.props.location.pathname.charAt(1);
@@ -31,7 +34,6 @@ class Catalog extends Component {
       prodData: this.props.mainOfMain[rightIndex],
       ProdSpec: this.props.mainOfMain[rightIndex][1]
     });
-    this.props.mountToggle();
   }
   //setting the correct index to view the sub category
   subGenreView = chosen => {

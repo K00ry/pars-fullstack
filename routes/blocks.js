@@ -40,7 +40,7 @@ router.get("/blocks", (req, res, next) => {
 /// posting new product size price and shipping
 
 router.post("/blocks", (req, res) => {
-  console.log(req.body);
+  // console.log(req.body);
 
   BlockSchema.findOne({ genreId: req.body.genreId })
     .exec()
