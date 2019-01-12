@@ -19,7 +19,7 @@ const Blocks = props => {
       <label htmlFor="size">Size</label>
       <br />
       <input
-        onChange={props.onTypeInput}
+        onChange={props.onSizeInput}
         type="text"
         id="size"
         name="size"

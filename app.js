@@ -35,7 +35,7 @@ db.once("open", () => {
 
 app.use("/", mainRoutes);
 app.use("/admin", KerbStoneroutes);
-// app.use("/admin", Blocks);
+app.use("/admin", Blocks);
 
 app.use((req, res, next) => {
   const err = new Error("Not Found");

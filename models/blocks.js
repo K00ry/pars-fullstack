@@ -20,4 +20,4 @@ const ProductSchema = new Schema({
 });
 const Blocks = mongoose.model("blocks", ProductSchema);
 
-module.exports.KerbStone = Blocks;
+module.exports.Blocks = Blocks;

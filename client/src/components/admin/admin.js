@@ -4,12 +4,15 @@ import Blocks from "./blocks";
 import KerbStoneRingsSlabsForm from "./kerbStonekavalForm";
 import PaversMosaicsForm from "./paversMosaicsForm";
 import SelectInput from "./selectInput";
+import TableWithPrice from "./table/tableWithPrice";
+import TableWithModel from "../catalog/imgAndTable/tableWithModel";
 
 class Admin extends Component {
   state = {
     message: "Please enter product description",
     genreEn: " ",
-    genreId: " "
+    genreId: " ",
+    FromServer: []
   };
 
   // handleSubmit func cant set the state value for post request value unless you bind (this) with constructor ^
@@ -26,13 +29,15 @@ class Admin extends Component {
       .post(url, this.state)
       .then(response => {
         this.setState({
-          message: response.data.message
+          FromServer: response.data
         });
+
         console.log(response.data);
       })
       .catch(error => {
         console.log("this is error", error);
       });
+    e.target.reset();
   }
 
   componentDidMount() {
@@ -52,10 +57,40 @@ class Admin extends Component {
     let op = e.target.options[e.target.selectedIndex];
     let optGroupName = op.parentNode.label;
 
-    this.setState({
-      genreEn: optGroupName,
-      genreId: e.target.value
-    });
+    this.setState(
+      {
+        genreEn: optGroupName,
+        genreId: e.target.value
+      },
+      () => {
+        let url = "/admin/" + this.state.genreEn;
+        axios
+          .get(url)
+          .then(response => {
+            console.log(response.data);
+            this.setState({
+              FromServer: response.data
+            });
+          })
+          .catch(error => {
+            console.log("this is error", error);
+          });
+      }
+    );
+
+    // let url = "/admin/" + this.state.genreEn;
+    // axios
+    //   .post(url, this.state)
+    //   .then(response => {
+    //     this.setState({
+    //       FromServer: response.data
+    //     });
+    //
+    //     console.log(response.data);
+    //   })
+    //   .catch(error => {
+    //     console.log("this is error", error);
+    //   });
   };
 
   onTypeInput = e => {
@@ -167,6 +202,8 @@ class Admin extends Component {
           <br />
           <button type="submit">SUBMIT!</button>
         </form>
+
+        <TableWithPrice t={this.props.t} fromServer={this.state.FromServer} />
 
         <h1>{this.state.message}</h1>
       </div>
