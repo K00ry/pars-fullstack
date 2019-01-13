@@ -2,33 +2,13 @@ const express = require("express");
 const router = express.Router();
 const BlockSchema = require("../models/blocks").Blocks;
 
-// router.get("/", (req, res, next) => {
-//   BlockSchema.findOne({ genreId: "pooke" })
-//     .exec()
-//     .then(block => {
-//       console.log(block);
-//       // const sizesArray = block.sizes.length;
-//       // block.sizes[sizesArray - 1].remove();
-//       // block.save();
-//       res.status(200).json(block);
-//     })
-//     .catch((err, prod) => {
-//       console.log(err);
-//       res.status(500).json({
-//         ...prod,
-//         message: `product ${prod.sizes[3].type} got saved!`
-//       });
-//     });
-// });
-
-//// GET request to show whats on DB
+// GET request for fetching  sub-documents and render in admin page
 
 router.get("/blocks", (req, res, next) => {
-  BlockSchema.find()
+  console.log(req.query.genreId);
+  BlockSchema.findOne({ genreId: req.query.genreId })
     .exec()
     .then(block => {
-      console.log(block);
-
       res.status(200).json(block);
     })
     .catch((err, prod) => {
@@ -58,6 +38,24 @@ router.post("/blocks", (req, res) => {
           message: `product ${prod.sizes[prod.sizes.length - 1].type} got saved`
         });
       });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ error: err });
+    });
+});
+
+// GET request for deleting a sub-document
+
+router.get("/blocks/delete", (req, res, next) => {
+  // console.log(req.query._id);
+  const receivedId = req.query._id;
+  BlockSchema.findOne({ genreId: req.query.genreId })
+    .exec()
+    .then(kerbs => {
+      kerbs.sizes.id(receivedId).remove();
+      kerbs.save();
+      res.status(200).json(kerbs);
     })
     .catch(err => {
       console.log(err);

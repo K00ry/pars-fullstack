@@ -1,29 +1,14 @@
 const express = require("express");
 const router = express.Router();
 const KerbSchema = require("../models/kerbStone").KerbStone;
-// const BlockSchema = require("../models/blocks").Blocks;
 
-// router.get("/", (req, res, next) => {
-//   KerbSchema.findOne({ genreId: "kush" })
-//     .exec()
-//     .then(kerbs => {
-//       console.log(kerbs);
-//       kerbs.sizes[3].remove();
-//       kerbs.save();
-//       res.status(200).json(kerbs);
-//     })
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json({ error: err });
-//     });
-// });
+// GET request for fetching  sub-documents and render in admin page
 
 router.get("/kerbStone", (req, res, next) => {
-  KerbSchema.find()
+  console.log(req.query.genreId);
+  KerbSchema.findOne({ genreId: req.query.genreId })
     .exec()
     .then(block => {
-      console.log(block);
-
       res.status(200).json(block);
     })
     .catch((err, prod) => {
@@ -32,8 +17,10 @@ router.get("/kerbStone", (req, res, next) => {
     });
 });
 
+//POST reqest to add new sub-document to MongoDB
+
 router.post("/kerbStone", (req, res) => {
-  console.log(req.body);
+  console.log(req.body.genreId);
 
   KerbSchema.findOne({ genreId: req.body.genreId })
     .exec()
@@ -47,9 +34,26 @@ router.post("/kerbStone", (req, res) => {
         console.log(err);
         res.status(200).json({
           ...prod,
-          message: `product ${prod.sizes[3].type} got saved`
+          message: `product ${prod.sizes[prod.sizes.length - 1].type} got saved`
         });
       });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ error: err });
+    });
+});
+
+// GET request for deleting a sub-document
+
+router.get("/kerbStone/delete", (req, res, next) => {
+  const receivedId = req.query._id;
+  KerbSchema.findOne({ genreId: req.query.genreId })
+    .exec()
+    .then(kerbs => {
+      kerbs.sizes.id(receivedId).remove();
+      kerbs.save();
+      res.status(200).json(kerbs);
     })
     .catch(err => {
       console.log(err);

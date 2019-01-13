@@ -4,6 +4,7 @@ import Table from "./table";
 class TableWithPrice extends Component {
   state = {
     prodCheck: "",
+    fromServer: [],
     updatedFromServer: []
   };
 
@@ -11,13 +12,14 @@ class TableWithPrice extends Component {
     // Typical usage (don't forget to compare props):
     if (this.props.fromServer !== prevProps.fromServer) {
       this.setState({
-        prodCheck: this.props.fromServer[0].genreEn,
-        updatedFromServer: this.props.fromServer
+        prodCheck: this.props.fromServer.genreEn,
+        updatedFromServer: this.props.fromServer.sizes
       });
     }
   }
 
   render() {
+    console.log(this.props.fromServer);
     let correctTableHead;
     this.state.prodCheck === "jadval"
       ? (correctTableHead = (
@@ -40,19 +42,21 @@ class TableWithPrice extends Component {
       <table className={`tg-${this.props.t("lang-class")}`}>
         <tbody>
           {correctTableHead}
-          {this.state.updatedFromServer.map(obj =>
-            obj.sizes.map((kbj, index) => (
-              <Table
-                check={this.state.prodCheck}
-                key={index}
-                type={kbj.type}
-                price={kbj.price}
-                shipping={kbj.shipping}
-                size={kbj.size}
-                t={this.props.t}
-              />
-            ))
-          )}
+          {this.state.updatedFromServer.map((kbj, index) => (
+            <Table
+              check={this.state.prodCheck}
+              deleteProductFromDb={() =>
+                this.props.deleteProductFromDb(kbj._id)
+              }
+              key={index}
+              id={kbj._id}
+              type={kbj.type}
+              price={kbj.price}
+              shipping={kbj.shipping}
+              size={kbj.size}
+              t={this.props.t}
+            />
+          ))}
         </tbody>
       </table>
     );

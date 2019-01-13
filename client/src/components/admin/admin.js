@@ -5,9 +5,13 @@ import KerbStoneRingsSlabsForm from "./kerbStonekavalForm";
 import PaversMosaicsForm from "./paversMosaicsForm";
 import SelectInput from "./selectInput";
 import TableWithPrice from "./table/tableWithPrice";
-import TableWithModel from "../catalog/imgAndTable/tableWithModel";
 
 class Admin extends Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
   state = {
     message: "Please enter product description",
     genreEn: " ",
@@ -16,47 +20,26 @@ class Admin extends Component {
     addedToDB: []
   };
 
-  // handleSubmit func cant set the state value for post request value unless you bind (this) with constructor ^
-  constructor(props) {
-    super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-
-    let url = "/admin/" + this.state.genreEn;
-    axios
-      .post(url, this.state)
-      .then(response => {
-        this.setState({
-          addedToDB: response.data
-        });
-
-        console.log(response.data);
-      })
-      .catch(error => {
-        console.log("this is error", error);
-      });
-    e.target.reset();
-  }
-
-  componentDidMount() {
-    axios
-      .get("/admin")
-      .then(response => {
-        console.log(response.data);
-      })
-      .catch(error => {
-        console.log("this is error", error);
-      });
-  }
+  // componentDidMount() {
+  //   axios
+  //     .get("/admin")
+  //     .then(response => {
+  //       console.log(response.data);
+  //     })
+  //     .catch(error => {
+  //       console.log("this is error", error);
+  //     });
+  // }
 
   /// useful callback function to request for showing data from database in to the table
-  dataFetchCall = productName => {
+  dataFetchCall = (productName, productId) => {
     let url = "/admin/" + productName;
     axios
-      .get(url)
+      .get(url, {
+        params: {
+          genreId: productId
+        }
+      })
       .then(response => {
         console.log(response.data);
         this.setState({
@@ -67,6 +50,52 @@ class Admin extends Component {
         console.log("this is error", error);
       });
   };
+
+  // handleSubmit func cant set the state value for post request value unless you bind (this) with constructor ^
+
+  handleSubmit(e) {
+    e.preventDefault();
+    let url = "/admin/" + this.state.genreEn;
+    axios
+      .post(url, this.state)
+      .then(response => {
+        this.setState(
+          {
+            addedToDB: response.data
+          },
+          () => this.dataFetchCall(this.state.genreEn, this.state.genreId)
+        );
+
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.log("this is error", error);
+      });
+    e.target.reset();
+  }
+
+  // function to take care of sending a request to delete a product from the data base
+  deleteProductFromDb = id => {
+    let url = `/admin/${this.state.genreEn}/delete/`;
+    axios
+      .get(url, {
+        params: {
+          genreId: this.state.genreId,
+          _id: id
+        }
+      })
+      .then(response => {
+        console.log(response.data);
+        this.setState({
+          FromServer: response.data,
+          addedToDB: []
+        });
+      })
+      .catch(error => {
+        console.log("this is error", error);
+      });
+  };
+
   //  set the value of the form input as the state of the component and sending a post req to the api in callback
 
   onSelectInput = e => {
@@ -78,22 +107,8 @@ class Admin extends Component {
         genreEn: optGroupName,
         genreId: e.target.value
       },
-      () => this.dataFetchCall(this.state.genreEn)
+      () => this.dataFetchCall(this.state.genreEn, this.state.genreId)
     );
-
-    // let url = "/admin/" + this.state.genreEn;
-    // axios
-    //   .post(url, this.state)
-    //   .then(response => {
-    //     this.setState({
-    //       FromServer: response.data
-    //     });
-    //
-    //     console.log(response.data);
-    //   })
-    //   .catch(error => {
-    //     console.log("this is error", error);
-    //   });
   };
 
   onTypeInput = e => {
@@ -205,8 +220,12 @@ class Admin extends Component {
           <br />
           <button type="submit">SUBMIT!</button>
         </form>
-        <h1 className="status">{this.state.message}</h1>
-        <TableWithPrice t={this.props.t} fromServer={this.state.FromServer} />
+        <h1 className="status">{this.state.addedToDB.message}</h1>
+        <TableWithPrice
+          t={this.props.t}
+          fromServer={this.state.FromServer}
+          deleteProductFromDb={this.deleteProductFromDb}
+        />
       </div>
     );
   }
