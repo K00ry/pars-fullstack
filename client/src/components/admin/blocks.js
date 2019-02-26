@@ -7,10 +7,10 @@ const Blocks = props => {
       <label htmlFor="type">Type</label>
       <br />
       <input
-        onChange={props.onTypeInput}
+        onChange={props.onType}
         type="text"
         id="type"
-        name="Type"
+        name="type"
         placeholder="..."
       />
       <br />
@@ -19,7 +19,7 @@ const Blocks = props => {
       <label htmlFor="size">Size</label>
       <br />
       <input
-        onChange={props.onSizeInput}
+        onChange={props.onType}
         type="text"
         id="size"
         name="size"
@@ -31,7 +31,7 @@ const Blocks = props => {
       <label htmlFor="price">Price</label>
       <br />
       <input
-        onChange={props.onPriceInput}
+        onChange={props.onType}
         type="text"
         id="price"
         name="price"
@@ -43,7 +43,7 @@ const Blocks = props => {
       <label htmlFor="shipping">Shipping</label>
       <br />
       <input
-        onChange={props.onShippingInput}
+        onChange={props.onType}
         type="text"
         id="shipping"
         name="shipping"

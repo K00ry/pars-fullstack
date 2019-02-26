@@ -4,13 +4,13 @@ const KerbStoneRingsSlabsForm = props => {
   return (
     <>
       <br />
-      <label htmlFor="Type">Type</label>
+      <label htmlFor="type">Type</label>
       <br />
       <input
-        onChange={props.onTypeInput}
+        onChange={props.onType}
         type="text"
         id="type"
-        name="Type"
+        name="type"
         placeholder="..."
       />
       <br />
@@ -19,7 +19,7 @@ const KerbStoneRingsSlabsForm = props => {
       <label htmlFor="Price">Price</label>
       <br />
       <input
-        onChange={props.onPriceInput}
+        onChange={props.onType}
         type="text"
         id="price"
         name="price"
@@ -31,7 +31,7 @@ const KerbStoneRingsSlabsForm = props => {
       <label htmlFor="shipping">Shipping</label>
       <br />
       <input
-        onChange={props.onShippingInput}
+        onChange={props.onType}
         type="text"
         id="shipping"
         name="shipping"
