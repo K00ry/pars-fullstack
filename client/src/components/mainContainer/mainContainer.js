@@ -30,8 +30,8 @@ const MainContainer = props => (
       return (
         <div key={CatalogSpec.type} className="main">
           <Parallax
-            bgImage={small}
-            bgImageSrcSet={`${small} 768w,${medium} 1280w, ${large} 1440w`}
+            // bgImage={small}
+            // bgImageSrcSet={`${small} 768w,${medium} 1280w, ${large} 1440w`}
             // bgImageSizes="(max-width: 768px) 100vw"
             strength={300}
           >
@@ -90,7 +90,7 @@ const MainContainer = props => (
             })}
           </div>
           <Parallax
-            bgImage={process.env.PUBLIC_URL + "img/deraz.jpg"}
+            // bgImage={process.env.PUBLIC_URL + "img/deraz.jpg"}
             strength={280}
           >
             <div
