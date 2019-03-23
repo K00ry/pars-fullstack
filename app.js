@@ -1,6 +1,7 @@
 var express = require("express");
 const mainRoutes = require("./routes");
 const KerbStoneroutes = require("./routes/kerbStone");
+
 const Blocks = require("./routes/blocks");
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -21,7 +22,7 @@ mongoose.connect(
   "mongodb://koory:" +
     process.env.MONGO_ATLAS_PW +
     "@pars-jadval-shard-00-00-4kkmo.mongodb.net:27017,pars-jadval-shard-00-01-4kkmo.mongodb.net:27017,pars-jadval-shard-00-02-4kkmo.mongodb.net:27017/test?ssl=true&replicaSet=pars-jadval-shard-0&authSource=admin&retryWrites=true",
-  { useNewUrlParser: true, useMongoClient: true }
+  { useNewUrlParser: true }
 );
 
 // mongoose.connect(

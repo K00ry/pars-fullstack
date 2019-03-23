@@ -4,6 +4,8 @@ import { Parallax } from "react-parallax";
 import img from "../../img/khanabig.png";
 import HomeProducts from "./homeProducts";
 
+import { ReactComponent as YellowTriangle } from "../../svg/triangle.svg";
+
 const insideStyles = {
   background: "transparent",
   padding: 20,
@@ -12,13 +14,16 @@ const insideStyles = {
   left: "50%",
   transform: "translate(-50%,-50%)"
 };
+// const insideStylesKoory = {
+//   backgroundImage: `url(${YellowTriangle}) no-repeat center `
+// };
 
 const MainContainer = props => (
   <Consumer>
     {({ mainData, CatalogSpec }) => {
-      const small = process.env.PUBLIC_URL + "images/sizeset/new/intro-mob.jpg";
-      const medium =
-        process.env.PUBLIC_URL + "images/sizeset/new/intro-tab.jpg";
+      // const small = process.env.PUBLIC_URL + "images/sizeset/new/intro-mob.jpg";
+      // const medium =
+      //   process.env.PUBLIC_URL + "images/sizeset/new/intro-tab.jpg";
       const large = process.env.PUBLIC_URL + "images/sizeset/new/intro-tab.jpg";
       const small_logo =
         process.env.PUBLIC_URL + "images/sizeset/new/intro-mob.png";
@@ -29,16 +34,17 @@ const MainContainer = props => (
 
       return (
         <div key={CatalogSpec.type} className="main">
+          <YellowTriangle />
           <Parallax
-            // bgImage={small}
+            // bgImage={YellowTriangle}
             // bgImageSrcSet={`${small} 768w,${medium} 1280w, ${large} 1440w`}
             // bgImageSizes="(max-width: 768px) 100vw"
-            strength={300}
+            strength={800}
           >
             <div className="parallax-my-custom">
               <div
-                // style={insideStyles}
                 className="intro"
+
                 // data-scroll="centerVertical,toggle(.fromTopIn, .fromTopOut)"
               >
                 <img
