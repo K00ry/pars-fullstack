@@ -17,7 +17,10 @@ class Admin extends Component {
     genreEn: " ",
     genreId: " ",
     FromServer: [],
-    addedToDB: []
+    addedToDB: [],
+    type: "",
+    price: "",
+    shipping: ""
   };
 
   // componentDidMount() {
@@ -111,50 +114,8 @@ class Admin extends Component {
     );
   };
 
-  onTypeInput = e => {
-    this.setState({
-      type: e.target.value
-    });
-  };
-  onSizeInput = e => {
-    this.setState({
-      size: e.target.value
-    });
-  };
-  onPriceInput = e => {
-    this.setState({
-      price: e.target.value
-    });
-  };
-  onShippingInput = e => {
-    this.setState({
-      shipping: e.target.value
-    });
-  };
-  onImgInput = e => {
-    this.setState({
-      img: e.target.value
-    });
-  };
-  onSquareFeetInput = e => {
-    this.setState({
-      inSquarefeet: e.target.value
-    });
-  };
-  onGreyInput = e => {
-    this.setState({
-      toosi: e.target.value
-    });
-  };
-  onYellowInput = e => {
-    this.setState({
-      yellowmix: e.target.value
-    });
-  };
-  onRedInput = e => {
-    this.setState({
-      red: e.target.value
-    });
+  koorysChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   render() {
@@ -165,36 +126,13 @@ class Admin extends Component {
       stateOfProduct === "slabs" ||
       stateOfProduct === "rings"
     ) {
-      rightForm = (
-        <KerbStoneRingsSlabsForm
-          onTypeInput={this.onTypeInput}
-          onPriceInput={this.onPriceInput}
-          onShippingInput={this.onShippingInput}
-        />
-      );
+      rightForm = <KerbStoneRingsSlabsForm onType={this.koorysChange} />;
     } else if (stateOfProduct === "blocks") {
-      rightForm = (
-        <Blocks
-          onTypeInput={this.onTypeInput}
-          onSizeInput={this.onSizeInput}
-          onPriceInput={this.onPriceInput}
-          onShippingInput={this.onShippingInput}
-        />
-      );
+      rightForm = <Blocks onType={this.koorysChange} />;
     } else if (stateOfProduct === " ") {
       rightForm = null;
     } else {
-      rightForm = (
-        <PaversMosaicsForm
-          onTypeInput={this.onTypeInput}
-          onImgInput={this.onImgInput}
-          onSquareFeetInput={this.onSquareFeetInput}
-          onGreyInput={this.onGreyInput}
-          onYellowInput={this.onYellowInput}
-          onRedInput={this.onRedInput}
-          onShippingInput={this.onShippingInput}
-        />
-      );
+      rightForm = <PaversMosaicsForm onType={this.koorysChange} />;
     }
     return (
       <div className="admin-page-container">

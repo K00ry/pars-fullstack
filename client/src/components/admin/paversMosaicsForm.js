@@ -7,7 +7,7 @@ const PaversMosaicsForm = props => {
       <label htmlFor="img">IMG</label>
       <br />
       <input
-        onChange={props.onImgInput}
+        onChange={props.onType}
         type="text"
         id="img"
         name="img"
@@ -19,10 +19,10 @@ const PaversMosaicsForm = props => {
       <label htmlFor="type">Type</label>
       <br />
       <input
-        onChange={props.onTypeInput}
+        onChange={props.onType}
         type="text"
         id="type"
-        name="Type"
+        name="type"
         placeholder="..."
       />
       <br />
@@ -31,7 +31,7 @@ const PaversMosaicsForm = props => {
       <label htmlFor="SquareFeet">Peace In Square feet</label>
       <br />
       <input
-        onChange={props.onSquareFeetInput}
+        onChange={props.onType}
         type="text"
         id="SquareFeet"
         name="SquareFeet"
@@ -43,7 +43,7 @@ const PaversMosaicsForm = props => {
       <label htmlFor="grey">Grey color Price</label>
       <br />
       <input
-        onChange={props.onGreyInput}
+        onChange={props.onType}
         type="text"
         id="grey"
         name="grey"
@@ -55,7 +55,7 @@ const PaversMosaicsForm = props => {
       <label htmlFor="red">Red color Price</label>
       <br />
       <input
-        onChange={props.onRedInput}
+        onChange={props.onType}
         type="text"
         id="red"
         name="red"
@@ -67,7 +67,7 @@ const PaversMosaicsForm = props => {
       <label htmlFor="yellow">Yellow color Price</label>
       <br />
       <input
-        onChange={props.onYellowInput}
+        onChange={props.onType}
         type="text"
         id="yellow"
         name="yellow"
@@ -79,7 +79,7 @@ const PaversMosaicsForm = props => {
       <label htmlFor="shipping">Shipping</label>
       <br />
       <input
-        onChange={props.onShippingInput}
+        onChange={props.onType}
         type="text"
         id="shipping"
         name="shipping"

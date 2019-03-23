@@ -18,7 +18,7 @@ const Toolbar = props => {
 
         return (
           <header className={position}>
-            <Headroom disableInlineStyles>
+            <Headroom disableInlineStyles className="container">
               <div className="lang-select">
                 <span
                   className={`lang-select--${props.t("lang-class")}`}
@@ -28,7 +28,7 @@ const Toolbar = props => {
                 </span>
               </div>
               <nav>
-                <div className={`header-div ${props.t("lang-class")}`}>
+                <div className={` header-div ${props.t("lang-class")}`}>
                   <div className="btn" onClick={actions.handleOpeningDrawer}>
                     <div id="menuToggle">
                       <span />

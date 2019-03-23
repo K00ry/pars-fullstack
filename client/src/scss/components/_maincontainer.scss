@@ -1,7 +1,7 @@
 ///////////////Jumbo on the main-page \\\\\\\\\\\\\\\\
 .parallax-my-custom{
-  background: rgb(230,218,218);
-  background: linear-gradient(190deg, rgba(230,218,218,0.8029586834733894) 0%, rgba(39,64,70,0.7973564425770308) 48%);
+  //background: rgb(230,218,218);
+  //background: linear-gradient(190deg, rgba(230,218,218,0.8029586834733894) 0%, rgba(39,64,70,0.7973564425770308) 48%);
   height: 100vh;
   @include media(iphone-plus) {
     //height: 50vh;
@@ -11,8 +11,8 @@
   }
 }
 .parallax-my-custom-2{
-  background: rgb(230,218,218);
-  background: linear-gradient(132deg, rgba(230,218,218,0.8029586834733894) 0%, rgba(39,64,70,0.7973564425770308) 0%);
+  //background: rgb(230,218,218);
+  //background: linear-gradient(132deg, rgba(230,218,218,0.8029586834733894) 0%, rgba(39,64,70,0.7973564425770308) 0%);
   height: 60vh;
   @include media(iphone-plus) {
     //height: 50vh;
@@ -46,7 +46,7 @@
   }
   .intro__h2.english {
    position: absolute;
-    @include font-fam-size( 1.5em, $main-font-2, 400, rgba($white,.9));
+    @include font-fam-size( 1.5em, $main-font-2, 400, $hard-gray);
     bottom: -1em;
     @include media(iphone-plus) {
       font-size: 2em;
@@ -59,7 +59,7 @@
   }
   .intro__h2.farsi {
     position: absolute;
-    @include font-fam-size( 2em, asli, bold, $white);
+    @include font-fam-size( 2em, asli, bold, $hard-gray);
     bottom: -1em;
     @include media(laptop) {
       font-size: 4em;
@@ -88,6 +88,10 @@
   .overlaySection__img{
     max-width: 100%;
     height: auto;
+
+
+
+
   }
   .overlaySection__card{
     background:transparent;
@@ -113,7 +117,7 @@
       }
     }
     .overlaySection__card--p{
-      @include font-fam-size( 1em, dovom, bold, $w-color );
+      @include font-fam-size( 1em, dovom, bold, $hard-gray);
       @include media(tablet) {
         font-size: 2em;
       }
@@ -157,7 +161,7 @@
       }
     }
     .overlaySection__card--p{
-      @include font-fam-size( 1em, $main-font-2, bold, $w-color );
+      @include font-fam-size( 1em, $main-font-2, bold, $hard-gray );
       @include media(tablet) {
         font-size: 2em;
         font-weight: 400;
@@ -234,10 +238,10 @@
 
     &:hover{
       //background: rgb(230,218,218);
-      background-color: rgba(39,64,70,0.8);
+      //background-color: rgba(39,64,70,0.8);
 
       .product-showcase__linkBlock--image{
-        opacity: 0.4;
+        //opacity: 0.4;
       }
 
 
@@ -300,10 +304,10 @@
 
     &:hover{
       //background: rgb(230,218,218);
-      background-color: rgba(39,64,70,0.8);
+      //background-color: rgba(39,64,70,0.8);
 
       .product-showcase__linkBlock--image{
-        opacity: 0.4;
+        //opacity: 0.4;
       }
 
 
