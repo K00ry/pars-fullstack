@@ -1,9 +1,9 @@
 .footer.farsi{
     h1 {
       margin: 0;
-      background-color: $hard-gray-l;
+      background-color: $yellow-new;
       padding: 1em;
-      @include font-fam-size( 1.2em, asli, bold, $text-yellow-main);
+      @include font-fam-size( 1.2em, asli, bold, $dark);
       text-align: right;
       @include media(tablet) {
         font-size:1.6em;
@@ -13,9 +13,9 @@
 .footer.english{
   h1 {
     margin: 0;
-    background-color: $hard-gray-l;
+    background-color: $yellow-new;
     padding: 1em;
-    @include font-fam-size( 1.2em, $main-font-2, 400, $text-yellow-main);
+    @include font-fam-size( 1.2em, $main-font-2, 400, $dark);
     text-align: left;
     @include media(tablet) {
       font-size:1.6em;

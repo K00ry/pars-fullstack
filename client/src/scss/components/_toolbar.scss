@@ -267,6 +267,7 @@ nav {
     }
 
     @include media(laptop) {
+      font-size: 1.4em;
       padding: 0;
       margin: .5em .5em;
 

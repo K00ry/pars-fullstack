@@ -12,11 +12,13 @@ $test-color: #fff;
 
 
 // added colors
+$dark : #0C0F0A;
+$yellow-new:#efd7a2;
 $text-yellow-main : #fdc53f;
 $light-grey	  : #999999;
 $hard-gray	  : #666666;
 $button-color : #D3D1FF;
-$dark-purple  : #7000CE;
+$dark-purple  : #4357AD;
 $body-text    : #E7F0E2;
 $highlight	  : #fcc646;
 $white      : #FFF;
@@ -36,7 +38,7 @@ $hard-gray-l			   : rgba($hard-gray,.9);
 $text-yellow-main-l         : rgba($text-yellow-main,.9);
 
 $dark-purple-l			   : rgba($dark-purple,.1);
-$dark-purple-m			   : rgba($dark-purple,.6);
+$dark-purple-m			   : rgba($dark-purple,.7);
 $newColor-l			   : rgba($newColor,.6);
 $text-color			   : rgba($text-black,.7);
 $link-color-light	   : rgba($link-color,.6);

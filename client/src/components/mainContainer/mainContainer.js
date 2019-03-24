@@ -4,7 +4,7 @@ import { Parallax } from "react-parallax";
 import img from "../../img/khanabig.png";
 import HomeProducts from "./homeProducts";
 
-import { ReactComponent as YellowTriangle } from "../../svg/triangle.svg";
+
 
 const insideStyles = {
   background: "transparent",
@@ -14,9 +14,7 @@ const insideStyles = {
   left: "50%",
   transform: "translate(-50%,-50%)"
 };
-// const insideStylesKoory = {
-//   backgroundImage: `url(${YellowTriangle}) no-repeat center `
-// };
+
 
 const MainContainer = props => (
   <Consumer>
@@ -24,7 +22,7 @@ const MainContainer = props => (
       // const small = process.env.PUBLIC_URL + "images/sizeset/new/intro-mob.jpg";
       // const medium =
       //   process.env.PUBLIC_URL + "images/sizeset/new/intro-tab.jpg";
-      const large = process.env.PUBLIC_URL + "images/sizeset/new/intro-tab.jpg";
+      // const large = process.env.PUBLIC_URL + "images/sizeset/new/intro-tab.jpg";
       const small_logo =
         process.env.PUBLIC_URL + "images/sizeset/new/intro-mob.png";
       const medium_logo =
@@ -34,7 +32,7 @@ const MainContainer = props => (
 
       return (
         <div key={CatalogSpec.type} className="main">
-          <YellowTriangle />
+          {/*<YellowTriangle />*/}
           <Parallax
             // bgImage={YellowTriangle}
             // bgImageSrcSet={`${small} 768w,${medium} 1280w, ${large} 1440w`}
@@ -74,7 +72,7 @@ const MainContainer = props => (
 
           {/*</div>*/}
 
-          <div className="product-showcase">
+          <div className=" container product-showcase">
             {mainData.map((arr, i) => {
               let floatClass;
               if (i === 0 || i === 3 || i === 4 || i === 7) {
@@ -90,6 +88,7 @@ const MainContainer = props => (
                   address={`/${i}`}
                   imgSrc={arr[0].genreEn}
                   product={arr[0].genreEn}
+                  subGenre={arr}
                   t={props.t}
                 />
               );

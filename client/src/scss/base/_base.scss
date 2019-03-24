@@ -1,7 +1,9 @@
 body {
     // padding-top: 75px; // background: url(../img/asset-3.png) no-repeat 100%;
     // background-size: 100%;
-    background-color: $background-White;
+    //background-color: $background-White;
+
+
 
 }
 
@@ -47,7 +49,7 @@ a:focus {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7);
+    background: $hard-gray-l;
     top: 0;
     left:0;
     z-index: 2;
