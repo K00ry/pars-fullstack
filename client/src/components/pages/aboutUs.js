@@ -1,6 +1,6 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
-import {Col, Grid, Row} from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 
 
 const insideStyles = {background: 'transparent', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
@@ -22,13 +22,15 @@ const AboutUs = props =>{
                     </div>
                 </div>
             </Parallax>
+            <div className="container">
 
-                <div className="history-block">
+                <div className={`history-block ${props.t("lang-class")}`}>
                     {/*<h2 className="history-block--title text-center">{props.t("pars-title-footer")}</h2>*/}
+
                     <p className="history-block--p text-center">{props.t("overlay-paragraph")}</p>
                 </div>
 
-            <Grid fluid className="feature_holder">
+            <Container  className="feature_holder">
                 <Row >
                     <Col xs={12}   sm={4} lg={4}    className="feature">
                         {/*<Thumbnail className="feature__block"  src={process.env.PUBLIC_URL + 'images/features/prod1.jpg'} alt="cover for Full Moon Junkies">*/}
@@ -76,7 +78,8 @@ const AboutUs = props =>{
 
                 </Row>
 
-            </Grid>
+            </Container>
+            </div>
         </div>
 
 

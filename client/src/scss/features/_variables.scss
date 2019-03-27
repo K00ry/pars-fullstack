@@ -12,8 +12,12 @@ $test-color: #fff;
 
 
 // added colors
-$dark : #0C0F0A;
+$dark : #494346;
 $yellow-new:#efd7a2;
+$grey-new:#495867;
+$orange-new:#CC3F0C;
+$purple-new:#6575BB;
+$bademjoon-new: #494346;
 $text-yellow-main : #fdc53f;
 $light-grey	  : #999999;
 $hard-gray	  : #666666;
@@ -25,20 +29,22 @@ $white      : #FFF;
 $white2     : #f6f6f6;
 $newColor :#274046;
 $text-dark :#46454a;
+$new-yellow2: #FDC53F;
 
 $background-White: #e6e7e9;
 $active-color :#CC6600;
 $test-color: #283441;
 
   // lightend colors \\
-$text-black-m	  		   : rgba($text-black,.9);
-$text-gray-m	  		   : rgba($text-black,.7);
+$text-black-m	  		   : rgba($dark,.9);
+$text-gray-m	  		   : rgba($dark,.7);
 $light-gray-l			   : rgba($light-grey,.9);
 $hard-gray-l			   : rgba($hard-gray,.9);
 $text-yellow-main-l         : rgba($text-yellow-main,.9);
+$yellow-new-l               : rgba($new-yellow2,.7);
 
-$dark-purple-l			   : rgba($dark-purple,.1);
-$dark-purple-m			   : rgba($dark-purple,.7);
+$dark-purple-l			   : rgba($purple-new,.1);
+$dark-purple-m			   : rgba($purple-new,.7);
 $newColor-l			   : rgba($newColor,.6);
 $text-color			   : rgba($text-black,.7);
 $link-color-light	   : rgba($link-color,.6);

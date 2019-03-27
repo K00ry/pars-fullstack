@@ -1,0 +1,143 @@
+//bootstrap corrections
+.nav-link{
+  padding: 0;
+}
+
+//////////
+
+
+//.nav-desk.english{
+//  @include flex-display(flex, row, space-between, 100%);
+//
+//    .nav-item{
+//      a{
+//      @include font-fam-size(.8em, Futura, 400,$light-grey );
+//      }
+//    }
+//}
+
+
+
+
+.nav-desk.farsi{
+  @include flex-display(flex, row, space-between, 100%);
+  flex-wrap: unset;
+  padding: 1em ;
+  position: relative;
+  background-color: $background-White;
+
+  .nav-item{
+    //width:10%;
+    @include flex-display(flex, row, space-between);
+
+    .nav-item__a{
+      margin: auto;
+      @include font-fam-size(1.2em, dovom, 400,$bademjoon-new );
+      transition: color .2s ease-in-out;
+      &:hover{
+        color:$light-grey;
+        text-decoration: underline;
+      }
+
+    }
+    .lang-select--farsi{
+      margin: auto;
+      @include font-fam-size(1em, futura, 400,$hard-gray );
+    }
+
+
+  }
+.dropdown-toggle{
+  @include font-fam-size(1.2em, asli, 400,$bademjoon-new );
+  margin: auto;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+
+  &:hover{
+    text-decoration: underline;
+    color:$light-grey;
+  }
+}
+  .dropdown-menu{
+    //@include flex-display(flex, column, space-between);
+
+    .dropdown-menu__a{
+      //text-align: right;
+      float: right;
+      @include font-fam-size(1em, asli, 400,$light-grey );
+    }
+  }
+}
+
+
+
+.nav-desk.english{
+  @include flex-display(flex, row, space-between, 100%);
+  flex-wrap: unset;
+  padding: 1em ;
+  position: relative;
+  background-color: $background-White;
+
+  .nav-item{
+    //width:10%;
+    @include flex-display(flex, row, space-between);
+
+    .nav-item__a{
+      margin: auto;
+      @include font-fam-size(1em, Futura, 800,$bademjoon-new );
+      transition: all .2s ease-in-out;
+
+      &:hover{
+        text-decoration: underline;
+        color:$light-grey;
+      }
+
+    }
+    .lang-select--english{
+      margin: auto;
+      @include font-fam-size(1em, dovom, 600,$purple-new );
+      //line-height: 1;
+    }
+
+
+  }
+  .dropdown-toggle{
+    @include font-fam-size(1.3em, Futura, 800,$bademjoon-new );
+    margin: auto;
+    transition: all .2s ease-in-out;
+
+    &:hover{
+      text-decoration: underline;
+      color:$light-grey;
+    }
+
+
+  }
+  .dropdown-menu{
+    //@include flex-display(flex, column, space-between);
+
+
+    .dropdown-menu__a{
+      text-align: right;
+      padding-right: 1em;
+      @include font-fam-size(1em, Futura, 400,$bademjoon-new );
+      transition: all .2s ease-in-out;
+
+      &:hover{
+        text-decoration: underline;
+        color:$light-grey;
+      }
+    }
+  }
+}
+.desk-logo{
+  width: 30%;
+  .toolbar-title{
+    img{
+      max-width:80%;
+      height: auto;
+      //width: 20%;
+    }
+  }
+
+}

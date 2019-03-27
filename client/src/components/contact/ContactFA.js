@@ -1,10 +1,10 @@
 import React from 'react';
-import {Grid,Col,Row} from 'react-bootstrap';
+import {Container,Col,Row} from 'react-bootstrap';
 import logo from "../../arrow.png";
 
 
 const ContactFA = () =>
-    <Grid fluid>
+    <Container >
         <Row>
         <div className="top-nav">
             <a  href="#btn" id="back-to-top">
@@ -34,7 +34,7 @@ const ContactFA = () =>
             </Col>
         </Row>
 
-    </Grid>;
+    </Container>;
 
 
 

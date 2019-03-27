@@ -252,7 +252,8 @@ nav {
     @include font-fam-size(0.8em, dovom, 500, $hard-gray);
     outline: none;
     //padding: 4px;
-    margin: auto 1em;
+    padding: 0 1em;
+    //margin: auto 1em;
     //background: $light-grey;
     //border: 2px solid $text-yellow-main;
     //border-radius: 20px;
@@ -277,8 +278,8 @@ nav {
   .lang-select--farsi {
     @include font-fam-size(0.8em, $main-font-2, 500, $hard-gray);
     outline: none;
-    padding: .2em;
-    margin: auto 1em;
+    padding: 0 1em;
+    //margin: auto 1em;
 
     @include media(iphone-plus) {
       font-size: 1em;

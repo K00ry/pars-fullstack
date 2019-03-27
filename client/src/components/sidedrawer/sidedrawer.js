@@ -4,25 +4,18 @@ import { Link } from "react-router-dom";
 import SideDrawerWithSubnav from "./sideDrawerWithSubnav";
 
 class SideDrawer extends Component {
-  // state = {
-  //   productSubNavOpen: false,
-  // };
-  //
-  // subNavToggle = () => {
-  //   this.setState(prevState => {
-  //     return { productSubNavOpen: !prevState.productSubNavOpen };
-  //   });
-  // };
 
   render() {
     return (
       <Consumer>
+
         {({ actions, openDrawer }) => {
           let sideDraw = "sidenav";
-
           if (openDrawer) {
             sideDraw = "sidenav nav-open";
           }
+
+
           return (
             <div
               id="mySidenav"

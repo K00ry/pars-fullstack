@@ -4,9 +4,11 @@ import {ReactComponent as Tick} from "../../svg/tick.svg";
 const SubItems = props =>{
 
     return(
-        <div className="product-showcase__linkBlock__title__block--row">
-        <h3>{props.t(props.item)}</h3>
-        <Tick className="tick"/>
+        <div className="title__block__row">
+            <div className="title__block__row--item"><h3>{props.t(props.item)}</h3></div>
+            <div className="title__block__row--item"><Tick className="tick"/></div>
+
+
         </div>
     )
 };

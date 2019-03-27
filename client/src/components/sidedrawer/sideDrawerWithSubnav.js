@@ -7,10 +7,10 @@ const SideDrawerWithSubnav = props => (
   <Consumer>
     {({ actions, slidDownNav, mainData }) => {
       let subNavOpen = "arrow-style";
-      let subOpenDisplay = "nav";
+      let subOpenDisplay = "nav-mine";
       if (slidDownNav) {
         subNavOpen = "arrow-style turn";
-        subOpenDisplay = "nav expand";
+        subOpenDisplay = "nav-mine expand";
       }
       return (
         <li className="sidenav-li-drop">
