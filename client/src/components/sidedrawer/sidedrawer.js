@@ -4,17 +4,14 @@ import { Link } from "react-router-dom";
 import SideDrawerWithSubnav from "./sideDrawerWithSubnav";
 
 class SideDrawer extends Component {
-
   render() {
     return (
       <Consumer>
-
         {({ actions, openDrawer }) => {
           let sideDraw = "sidenav";
           if (openDrawer) {
             sideDraw = "sidenav nav-open";
           }
-
 
           return (
             <div

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // import ScrollTrigger from "scrolltrigger-classes";
 
-
 const ParsJadvalContext = React.createContext();
 
 export class Provider extends Component {

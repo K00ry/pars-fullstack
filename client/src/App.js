@@ -97,9 +97,9 @@ const App = props => (
 
               <Contact t={props.t} />
               <footer className={`footer  ${props.t("lang-class")}`}>
-                        <div className="container">
-                          <h1>©{t("pars-title-footer")}</h1>
-                        </div>
+                <div className="container">
+                  <h1>©{t("pars-title-footer")}</h1>
+                </div>
               </footer>
             </div>
           )}

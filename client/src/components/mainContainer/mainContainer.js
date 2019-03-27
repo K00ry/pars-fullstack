@@ -4,7 +4,6 @@ import { Consumer } from "../context";
 import img from "../../img/khanabig.png";
 import HomeProducts from "./homeProducts";
 
-
 //
 // const insideStyles = {
 //   background: "transparent",
@@ -14,7 +13,6 @@ import HomeProducts from "./homeProducts";
 //   left: "50%",
 //   transform: "translate(-50%,-50%)"
 // };
-
 
 const MainContainer = props => (
   <Consumer>
@@ -32,26 +30,19 @@ const MainContainer = props => (
 
       return (
         <div key={CatalogSpec.type} className="main">
-
-
-            <div className="intro">
-              <div
-                className="intro__block container">
-                <img
-                  className="intro__block--img"
-                  src={small_logo}
-                  srcSet={`${small_logo} 768w,${medium_logo} 1280w, ${large_logo} 1440w`}
-                  alt="Pars Jadval logo"
-
-                />
-                <h2 className={`intro__block--h2 ${props.t("lang-class")}`}>
-                  {props.t("concrete-precast")}
-                </h2>
-              </div>
+          <div className="intro">
+            <div className="intro__block container">
+              <img
+                className="intro__block--img"
+                src={small_logo}
+                srcSet={`${small_logo} 768w,${medium_logo} 1280w, ${large_logo} 1440w`}
+                alt="Pars Jadval logo"
+              />
+              <h2 className={`intro__block--h2 ${props.t("lang-class")}`}>
+                {props.t("concrete-precast")}
+              </h2>
             </div>
-
-
-
+          </div>
 
           <div className=" container product-showcase">
             {mainData.map((arr, i) => {
@@ -76,25 +67,25 @@ const MainContainer = props => (
             })}
           </div>
           {/*<Parallax strength={280}>*/}
-            {/*<div className="parallax-my-custom-2">*/}
-              <div
-                // style={insideStyles}
-                className={`container overlaySection ${props.t("lang-class")}`}
-              >
-                {/*<img className="overlaySection__img" src={process.env.PUBLIC_URL + 'img/kamyon.jpg'}/>*/}
-                <div
-                  className="overlaySection__card"
-                  data-scroll="centerVertical,toggle(.scaleDownIn, .scaleDownOut)"
-                >
-                  <h2 className="overlaySection__card--title">
-                    {props.t("pars-title-footer")}
-                  </h2>
-                  <p className="overlaySection__card--p">
-                    {props.t("overlay-paragraph")}
-                  </p>
-                </div>
-              </div>
-            {/*</div>*/}
+          {/*<div className="parallax-my-custom-2">*/}
+          <div
+            // style={insideStyles}
+            className={`container overlaySection ${props.t("lang-class")}`}
+          >
+            {/*<img className="overlaySection__img" src={process.env.PUBLIC_URL + 'img/kamyon.jpg'}/>*/}
+            <div
+              className="overlaySection__card"
+              data-scroll="centerVertical,toggle(.scaleDownIn, .scaleDownOut)"
+            >
+              <h2 className="overlaySection__card--title">
+                {props.t("pars-title-footer")}
+              </h2>
+              <p className="overlaySection__card--p">
+                {props.t("overlay-paragraph")}
+              </p>
+            </div>
+          </div>
+          {/*</div>*/}
           {/*</Parallax>*/}
         </div>
       );
