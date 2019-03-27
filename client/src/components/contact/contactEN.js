@@ -1,14 +1,16 @@
 import React from 'react';
-import logo from "../../arrow.png";
-import {Col, Grid, Row} from "react-bootstrap";
+
+import {Col, Container, Row} from "react-bootstrap";
+import {ReactComponent as Arrow} from "../../svg/arrow.svg";
 
 
 const ContactEN = () =>
-    <Grid fluid>
+    <Container >
         <Row>
             <div className="top-nav">
                 <a href="#btn" id="back-to-top">
-                    <img className="contact-arrow" src={logo} alt="Arrow" />
+                    {/*<img className="contact-arrow" src={logo} alt="Arrow" />*/}
+                    <Arrow/>
                     <br />Top
                 </a>
             </div>
@@ -34,7 +36,7 @@ const ContactEN = () =>
             </Col>
         </Row>
 
-    </Grid>;
+    </Container>;
 
 
 

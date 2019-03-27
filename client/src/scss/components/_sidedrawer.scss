@@ -6,7 +6,8 @@
   z-index: 3;
   top: 0;
   //background-color: $hard-gray;
-  background: linear-gradient(132deg, rgba(230, 218, 218, 0.802959) 0%, rgba(39, 64, 70, 0.797356) 0%);
+  //background: linear-gradient(132deg, rgba(230, 218, 218, 0.802959) 0%, rgba(39, 64, 70, 0.797356) 0%);
+  background-color: $bademjoon-new;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 2em;
@@ -226,11 +227,6 @@
     .sidenav-li-drop{
       @include flex-display(flex, column, space-between, 100%, center);
     }
-    //.sidenav-noSub:last-child{
-    //  border-bottom: 2px solid $text-yellow-main;
-    //}
-
-
   }
 
 
@@ -331,7 +327,7 @@ padding: 0;
   @include font-fam-size(1.4em, asli, 100, $text-yellow-main-l);
 }
 
-.nav {
+.nav-mine {
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease-in-out;

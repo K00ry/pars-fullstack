@@ -1,22 +1,44 @@
-.history-block{
-
+.history-block.farsi{
+  margin: auto;
+  width:60%;
+  display: flex;
   .history-block--title{
     @include font-fam-size( 2.3em, asli, bold, $text-yellow-main );
-
   }
   .history-block--p{
+    margin: auto;
+    text-align: center;
     padding: 1em .5em ;
-    @include font-fam-size( 1em, dovom, bold, $hard-gray );
+    @include font-fam-size( 2em, dovom, bold, $bademjoon-new );
 
   }
 }
+
+
+
+.history-block.english{
+  margin: auto;
+  display: flex;
+  width:60%;
+  .history-block--title{
+    @include font-fam-size( 2.3em, Futura, bold, $text-yellow-main );
+  }
+  .history-block--p{
+
+    padding: 1em .5em ;
+    @include font-fam-size( 2em, Futura, bold, $bademjoon-new );
+
+  }
+}
+
+
 
 .feature_holder{
   padding-top: 2em;
   padding-bottom: 2em;
   @include media(desktop) {
-    padding-top: 14em;
-    padding-bottom: 14em;
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
 }
 
@@ -97,7 +119,7 @@
 
     }
     .feature__block--text.english{
-      @include font-fam-size( 1em, $main-font-1, 300, $hard-gray );
+      @include font-fam-size( 1em, futura, 300, $hard-gray );
       line-height: 1.5;
       @include media(tablet) {
         font-size: 1.2em;

@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { translate } from "react-i18next";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import { Col, Grid, Row } from "react-bootstrap";
+
 import { Consumer } from "./components/context";
 import Toolbar from "./components/toolbar/toolbar";
 import Admin from "./components/admin/admin";
@@ -96,14 +96,10 @@ const App = props => (
               </TransitionGroup>
 
               <Contact t={props.t} />
-              <footer className={`footer ${props.t("lang-class")}`}>
-                <Grid>
-                  <Row>
-                    <Col>
-                      <h1>©{t("pars-title-footer")}</h1>
-                    </Col>
-                  </Row>
-                </Grid>
+              <footer className={`footer  ${props.t("lang-class")}`}>
+                        <div className="container">
+                          <h1>©{t("pars-title-footer")}</h1>
+                        </div>
               </footer>
             </div>
           )}

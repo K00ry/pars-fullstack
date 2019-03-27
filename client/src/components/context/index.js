@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import ScrollTrigger from "scrolltrigger-classes";
+// import ScrollTrigger from "scrolltrigger-classes";
+
 
 const ParsJadvalContext = React.createContext();
 
@@ -44,9 +45,11 @@ export class Provider extends Component {
           CatalogSpec: response[0][0]
         });
       });
-    document.addEventListener("DOMContentLoaded", function() {
-      new ScrollTrigger();
-    });
+    // document.addEventListener("DOMContentLoaded", function() {
+    //   new ScrollTrigger(
+    //       // {centerHorizontal:true}
+    //   );
+    // });
   }
 
   render() {

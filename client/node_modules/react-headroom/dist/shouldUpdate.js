@@ -33,6 +33,12 @@ exports.default = function () {
       action: 'none',
       scrollDirection: scrollDirection,
       distanceScrolled: distanceScrolled
+    };
+  } else if (currentScrollY > state.height + props.pinStart && scrollDirection === 'down' && state.state === 'unfixed') {
+    return {
+      action: 'unpin-snap',
+      scrollDirection: scrollDirection,
+      distanceScrolled: distanceScrolled
       // We're past the header and scrolling down.
       // We transition to "unpinned" if necessary.
     };
