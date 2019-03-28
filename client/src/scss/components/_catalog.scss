@@ -106,7 +106,7 @@
 
 .catalog-header-farsi {
   position: relative;
-  background: url('./img/catalog-head.jpg') no-repeat center;
+  //background: url('./img/catalog-head.jpg') no-repeat center;
 
   background-size: cover;
   margin: auto;
@@ -139,6 +139,7 @@
     .catalog-header__title_info {
       text-align: center;
       @include font-fam-size(3em, asli, bold, $text-dark );
+      padding: 0;
       margin: auto;
       @include media(tablet) {
         padding: .6em 0;
@@ -154,7 +155,7 @@
 }
 .catalog-header-english {
   position: relative;
-  background: url('./img/catalog-head.jpg') no-repeat center;
+  //background: url('./img/catalog-head.jpg') no-repeat center;
 
   background-size: cover;
   margin: auto;
