@@ -9,7 +9,7 @@
     "i18next-browser-languagedetector": "^2.2.4",
     "jquery": "^3.3.1",
     "node-sass": "^4.11.0",
-    "react": "^16.8.5",
+    "react": "^16.8.6",
     "react-addons-css-transition-group": "^15.6.2",
     "react-bootstrap": "^1.0.0-beta.6",
     "react-data-fetching": "^0.2.4",
@@ -37,5 +37,7 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {}
+  "devDependencies": {
+    "install-peers": "^1.0.3"
+  }
 }
