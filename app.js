@@ -8,9 +8,9 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
 const app = express();
-const logger = require("morgan");
-
-app.use(logger("dev"));
+// const logger = require("morgan");
+//
+// app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.set("view engine", "pug");
