@@ -23,7 +23,7 @@ const LoadIn = props =>{
 
                 </div>
             </Parallax>
-            <div className='gallery-loadIn'>
+            <div className='gallery-loadIn container'>
                 <div className="gallery-loadIn__block" >
 
                     <img  alt="production of pars jadval" className="gallery-loadIn__block--img" src={process.env.PUBLIC_URL + 'images/load-in/load-1.jpg'}/>

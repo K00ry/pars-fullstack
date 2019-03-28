@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node app.js",
     "server": "nodemon app.js",
-    "client": "npm start --prefix client",
+    "client": "npm start --prefix ../client",
     "heroku-postbuild": "cd client && npm install && npm rebuild node-sass && npm run build",
     "dev": "concurrently \"npm run server\" \"npm run client \""
   },
@@ -23,7 +23,6 @@
     "cookie-parser": "^1.4.4",
     "express": "^4.16.4",
     "mongoose": "^5.4.20",
-    "node-sass": "^4.11.0",
     "path": "^0.12.7",
     "pug": "^2.0.3"
   },
