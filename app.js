@@ -19,10 +19,10 @@ app.use(express.static(path.join(__dirname, "client/build")));
 var mongoose = require("mongoose");
 // mongoose.connect("mongodb://localhost:27017/parsjadval");
 mongoose.connect(
-  "mongodb://koory:" +
+    "mongodb://koory:" +
     process.env.MONGO_ATLAS_PW +
     "@pars-jadval-shard-00-00-4kkmo.mongodb.net:27017,pars-jadval-shard-00-01-4kkmo.mongodb.net:27017,pars-jadval-shard-00-02-4kkmo.mongodb.net:27017/test?ssl=true&replicaSet=pars-jadval-shard-0&authSource=admin&retryWrites=true",
-  { useNewUrlParser: true }
+    { useNewUrlParser: true }
 );
 
 // mongoose.connect(
@@ -35,10 +35,12 @@ const db = mongoose.connection;
 
 db.on("error", err => {
   console.error("connection error:", err);
+
 });
 
 db.once("open", () => {
   console.log("DB connection successful!");
+
 });
 
 app.use("/", mainRoutes);
