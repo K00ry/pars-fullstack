@@ -23,8 +23,7 @@
     "cookie-parser": "^1.4.4",
     "express": "^4.16.4",
     "mongoose": "^5.4.20",
-    "path": "^0.12.7",
-    "pug": "^2.0.3"
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "chai": "^4.2.0",
