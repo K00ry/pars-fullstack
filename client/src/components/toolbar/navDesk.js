@@ -70,6 +70,11 @@ const NavDesk = props => {
           {langString}
         </span>
       </Nav.Item>
+        <Nav.Item>
+            <Link to="/admin" className="nav-item__a">
+                Admin
+            </Link>
+        </Nav.Item>
     </Nav>
   );
 };

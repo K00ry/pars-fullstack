@@ -1,6 +1,7 @@
-
 client/node_modules
 client/build
+client/.DS_Store
+client/public/.DS_Store
 client/npm-debug.log*
 client/yarn-debug.log*
 client/yarn-error.log*
@@ -13,3 +14,4 @@ client/env.production.local
 server/node_modules
 server/nodemon.json
 server/.env
+.DS_Store

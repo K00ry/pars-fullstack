@@ -1,7 +1,7 @@
 import React from "react";
 import { Consumer } from "../context";
 // import { Parallax } from "react-parallax";
-import img from "../../img/khanabig.png";
+// import img from "../../img/khanabig.png";
 import HomeProducts from "./homeProducts";
 
 //
