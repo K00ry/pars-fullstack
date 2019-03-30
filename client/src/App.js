@@ -53,6 +53,8 @@ const App = props => (
                   classNames="slide"
                 >
                   <Switch location={location}>
+
+                    {/*<Route render={() => <MainContainer t={props.t} />}/>*/}
                     <Route
                       exact
                       path="/"
