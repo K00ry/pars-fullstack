@@ -1,4 +1,5 @@
 const express = require("express");
+ require('dotenv').config();
 const path = require("path");
 const mainRoutes = require("./routes");
 
@@ -28,12 +29,14 @@ var mongoose = require("mongoose");
 
 mongoose.connect(
 
-   process.env.MONGODB_URI
-    ||
+  //  process.env.MONGODB_URI
+  //   ||
+
   "mongodb+srv://koory:" +
     process.env.MONGO_ATLAS_PW +
     "@pars-jadval-4kkmo.mongodb.net/test?retryWrites=true",
      { useNewUrlParser: true }
+
 
 );
 
