@@ -50,6 +50,9 @@ db.once("open", () => {
 app.use("/", mainRoutes);
 app.use("/admin", KerbStoneroutes);
 app.use("/admin", Blocks);
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build/index.html'));
+});
 
 app.use((req, res, next) => {
   const err = new Error("Not Found");
@@ -57,13 +60,14 @@ app.use((req, res, next) => {
   next(err);
 });
 
-app.use((err, req, res, next) => {
-  res.locals.error = err;
-  res.status(err.status);
-  res.render("error");
+app.use((error, req, res, next) => {
+  res.status(error.status || 500);
+  res.json({
+    error:{
+      message:error.message
+    }
+  });
 });
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/build/index.html"));
-});
+
 
 app.listen(process.env.PORT || 5000);
