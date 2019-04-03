@@ -35,15 +35,25 @@ export class Provider extends Component {
 
   // to fetch the main data from Express
   componentDidMount() {
-    fetch("/users")
+    fetch("/main")
       .then(res => res.json())
       .then(response => {
+          console.log(response);
         this.setState({
           mainData: response,
           CatalogData: response[0],
           CatalogSpec: response[0][0]
         });
       });
+
+      // fetch("/test")
+      //     .then(res => res.json())
+      //     .then(response => {
+      //         console.log(response);
+      //     });
+
+
+
     // document.addEventListener("DOMContentLoaded", function() {
     //   new ScrollTrigger(
     //       // {centerHorizontal:true}

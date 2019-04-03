@@ -13,10 +13,10 @@ const catalogDownLoad = props =>{
                       bgImageSrcSet={`${small} 768w,${medium} 1280w, ${large} 1440w`}
                       bgImageSizes="(max-width: 768px) 100vw" strength={200}>
                 <div className="parallax-for-contactPage">
-                    <div style={insideStyles} className={`contact-us ${props.t("lang-class")}`}>
-                        <div className='contact-us__block'>
-                            <h2   className='contact-us__block--h2'>{props.t("contactUs")}</h2>
-                            <p   className='contact-us__block--p' >{props.t("contactUs-p")}</p>
+                    <div style={insideStyles} className={`pages-header ${props.t("lang-class")}`}>
+                        <div className='pages-header__block'>
+                            <h2   className='pages-header__block--h2'>{props.t("contactUs")}</h2>
+                            <p   className='pages-header__block--p' >{props.t("contactUs-p")}</p>
                         </div>
                     </div>
 

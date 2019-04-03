@@ -24,7 +24,7 @@
   flex-wrap: unset;
   padding: 1em ;
   position: relative;
-  background-color: $background-White;
+  background-color: transparent;
 
   .nav-item{
     //width:10%;
@@ -60,11 +60,22 @@
 }
   .dropdown-menu{
     //@include flex-display(flex, column, space-between);
+    .dropdown-item{
+      display: flex;
+      justify-content: flex-end;
+      &:active{
+        background-color: $purple-new;
+      }
+    }
 
     .dropdown-menu__a{
-      //text-align: right;
-      float: right;
-      @include font-fam-size(1em, asli, 400,$light-grey );
+      text-align: right;
+      //float: right;
+      @include font-fam-size(1em, asli, 400,$bademjoon-new );
+      &:hover{
+        text-decoration: underline;
+        color:$light-grey;
+      }
     }
   }
 }
@@ -76,7 +87,7 @@
   flex-wrap: unset;
   padding: 1em ;
   position: relative;
-  background-color: $background-White;
+  background-color: transparent;
 
   .nav-item{
     //width:10%;
@@ -84,7 +95,7 @@
 
     .nav-item__a{
       margin: auto;
-      @include font-fam-size(1em, Futura, 800,$bademjoon-new );
+      @include font-fam-size(1.2em, Futura, 800,$bademjoon-new );
       transition: all .2s ease-in-out;
 
       &:hover{
@@ -115,6 +126,14 @@
   }
   .dropdown-menu{
     //@include flex-display(flex, column, space-between);
+    .dropdown-item{
+      &:active{
+
+        background-color: $purple-new;
+      }
+
+    }
+
 
 
     .dropdown-menu__a{
@@ -141,3 +160,5 @@
   }
 
 }
+
+

@@ -24,7 +24,41 @@
 
     }
     @include media(tablet) {
-      width: 30%;
+      width: 40%;
+    }
+  }
+  .lang-select--english {
+    @include font-fam-size(1em, dovom, 500, $text-yellow-main-l);
+    outline: none;
+    position: absolute;
+    right:1em;
+    top:1.5em;
+    @include media(iphone-plus) {
+
+    }
+    @include media(tablet) {
+      //font-size: .7em;
+    }
+
+    @include media(laptop) {
+    }
+  }
+
+  .lang-select--farsi {
+    @include font-fam-size(1.2em, Futura, 500, $text-yellow-main-l);
+    //margin: auto 1em;
+    position: absolute;
+    left:1em;
+    top:1em;
+    @include media(iphone-plus) {
+
+    }
+    @include media(tablet) {
+
+    }
+
+    @include media(laptop) {
+
     }
   }
   ///// style change from right to left on language change \\\\
@@ -174,7 +208,7 @@
     }
     .sideNav-sub__li {
       @include flex-display(flex, column, space-between, 100%);
-      border-top: 1px solid $white;
+      //border-top: 1px solid $white;
       text-align: right;
 
 
@@ -345,6 +379,9 @@ padding: 0;
 .offcanvas a:focus {
   color: #f1f1f1;
 }
+
+
+
 
 
 

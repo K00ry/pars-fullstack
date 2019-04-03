@@ -12,7 +12,7 @@ const NavDesk = props => {
   lang === "en" ? (langString = "English") : (langString = "فارسی");
   const toggle = lng => i18n.changeLanguage(lng);
   return (
-    <Nav className={`nav-desk ${props.t("lang-class")}`}>
+    <Nav className={`nav-desk container ${props.t("lang-class")}`}>
       <div className="desk-logo">
         <Link to="/" className="toolbar-title">
           <img
@@ -27,7 +27,7 @@ const NavDesk = props => {
       {/*{props.t("sideNav-home")}*/}
       {/*</Link>*/}
       {/*</Nav.Item>*/}
-      <NavDropdown title={props.t("products")} id="nav-dropdown">
+      <NavDropdown  title={props.t("products")} id="nav-dropdown">
         {props.data.map((arr, index) => (
           <NavSubs
             t={props.t}

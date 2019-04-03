@@ -1,3 +1,34 @@
+.pages-header.english{
+  width: 80%;
+  .pages-header__block--h2{
+    @include font-fam-size(2em, futura, bold, $white );
+    text-align: center;
+
+  }
+  .pages-header__block--p{
+    @include font-fam-size(1em, futura, bold, $white );
+  }
+
+
+}
+.pages-header.farsi{
+  width: 80%;
+  .pages-header__block--h2{
+    @include font-fam-size(3em, asli, bold, $white );
+    text-align: center;
+
+
+  }
+  .pages-header__block--p{
+    @include font-fam-size(1em, dovom, bold, $white );
+    text-align: right;
+  }
+
+
+}
+
+
+
 .gallery-lab{
   @include flex-display(flex, column, space-evenly, 100%);
 

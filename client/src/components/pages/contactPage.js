@@ -50,20 +50,30 @@ class ContactPage extends Component {
           <div className="parallax-for-contactPage">
             <div
               style={insideStyles}
-              className={`contact-us ${this.props.t("lang-class")}`}
+              className={`pages-header ${this.props.t("lang-class")}`}
             >
-              <div className="contact-us__block">
-                <h2 className="contact-us__block--h2">
+              <div className="pages-header__block">
+                <h2 className="pages-header__block--h2">
                   {this.props.t("contactUs")}
                 </h2>
-                <p className="contact-us__block--p">
-                  {this.props.t("contactUs-p")}
-                </p>
+                {/*<p className="pages-header__block--p">*/}
+                  {/*{this.props.t("contactUs-p")}*/}
+                {/*</p>*/}
               </div>
             </div>
           </div>
         </Parallax>
-        <div id="map" />
+
+        <div className="container">
+          <div className={`history-block ${this.props.t("lang-class")}`}>
+            {/*<h2 className="history-block--title text-center">{props.t("pars-title-footer")}</h2>*/}
+            <p className="history-block--p ">
+              {this.props.t("contactUs-p")}
+            </p>
+          </div>
+        </div>
+
+        <div id="map" className="container"/>
       </div>
     );
   }

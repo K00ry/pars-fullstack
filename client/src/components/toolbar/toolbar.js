@@ -20,7 +20,9 @@ const Toolbar = props => {
         let position = catalogMount ? "inCatalog" : " ";
 
         return (
-          <header className={position}>
+          <header
+              className={position}
+          >
             <Headroom disableInlineStyles className="container-fluid">
               {/*<div className="lang-select">*/}
               {/*<span*/}

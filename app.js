@@ -1,10 +1,9 @@
 const express = require("express");
 const path = require("path");
 const mainRoutes = require("./routes");
-
 const KerbStoneroutes = require("./routes/kerbStone");
-
 const Blocks = require("./routes/blocks");
+const Furnish = require("./routes/sites");
 
 const bodyParser = require("body-parser");
 // const cookieParser = require("cookie-parser");
@@ -14,8 +13,7 @@ const app = express();
 //
 // app.use(logger("dev"));
 app.use(bodyParser.json());
-// app.use(cookieParser());
-// app.set("view engine", "pug");
+
 app.use(express.static(path.join(__dirname, "client/build")));
 
 var mongoose = require("mongoose");
@@ -37,6 +35,7 @@ mongoose.connect(
 
 const db = mongoose.connection;
 
+
 db.on("error", err => {
   console.error("connection error:", err);
 
@@ -47,9 +46,14 @@ db.once("open", () => {
 
 });
 
+
+
 app.use("/", mainRoutes);
 app.use("/admin", KerbStoneroutes);
 app.use("/admin", Blocks);
+app.use("/admin", Furnish);
+
+
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build/index.html'));
 });

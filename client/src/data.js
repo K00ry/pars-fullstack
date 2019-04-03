@@ -241,9 +241,7 @@ const DATA = [
         {
           img: "/images/kafpoosh/wetpress/red.png",
           type: "۵۰*۵۰*۸",
-
           inSquarefeet: "۴ عدد",
-
           toosi: "۲۵۰۰۰۰",
           red: "۳۰۰۰۰۰",
           yellowmix: "۳۵۰۰۰۰",
@@ -252,9 +250,7 @@ const DATA = [
         {
           img: "/images/kafpoosh/wetpress/yellow.png",
           type: "۵۰*۵۰*۸",
-
           inSquarefeet: "۴ عدد",
-
           toosi: "۲۵۰۰۰۰",
           red: "۳۰۰۰۰۰",
           yellowmix: "۳۵۰۰۰۰",

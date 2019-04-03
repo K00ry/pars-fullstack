@@ -65,7 +65,7 @@ class Catalog extends Component {
 
     return (
       <div className="main">
-        <div className="catalog-body">
+        <div className="catalog-body container">
           {/*this component belongs only fo desktop view*/}
           <CatalogGenreDesktop
             mainData={this.props.mainOfMain}
@@ -75,8 +75,7 @@ class Catalog extends Component {
           <div className="catalog-function">
             <div
               className={`catalog-header-${this.props.t("lang-class")}`}
-              key={this.state.ProdSpec.genreFarsi}
-            >
+              key={this.state.ProdSpec.genreFarsi}>
               <div className="catalog-header__title">
                 <h1 className="catalog-header__title_info">
                   {this.props.t(this.state.prodData[0].genreEn)}

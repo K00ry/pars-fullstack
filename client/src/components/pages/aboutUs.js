@@ -27,11 +27,11 @@ const AboutUs = props => {
         <div className="parallax-for-contactPage">
           <div
             style={insideStyles}
-            className={`contact-us ${props.t("lang-class")}`}
+            className={`pages-header ${props.t("lang-class")}`}
           >
-            <div className="contact-us__block">
-              <h2 className="contact-us__block--h2">{props.t("about")}</h2>
-              {/*<p   className='contact-us__block--p' >{props.t("contactUs-p")}</p>*/}
+            <div className="pages-header__block">
+              <h2 className="pages-header__block--h2">{props.t("about")}</h2>
+              {/*<p   className='pages-header__block--p' >{props.t("contactUs-p")}</p>*/}
             </div>
           </div>
         </div>
@@ -40,7 +40,7 @@ const AboutUs = props => {
         <div className={`history-block ${props.t("lang-class")}`}>
           {/*<h2 className="history-block--title text-center">{props.t("pars-title-footer")}</h2>*/}
 
-          <p className="history-block--p text-center">
+          <p className="history-block--p ">
             {props.t("overlay-paragraph")}
           </p>
         </div>
