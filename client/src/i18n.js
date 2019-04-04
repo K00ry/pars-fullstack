@@ -1,8 +1,12 @@
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
+// import Backend from "i18next-locize-backend";
 // import React from "react";
 
-i18n.use(LanguageDetector).init({
+i18n
+    .use(LanguageDetector)
+    // .use(Backend)
+    .init({
     // we init with resources
     resources: {
         en: {
@@ -17,7 +21,7 @@ i18n.use(LanguageDetector).init({
                 "lang-class":"english",
 
                 "sideNav-home": "HOME",
-                "products": "Products",
+                "products": "PRODUCTS",
                 "jadval":"Kerbstone",
                 "blook":"Blocks",
                 "kafpoosh":"Pavers",
@@ -543,7 +547,7 @@ i18n.use(LanguageDetector).init({
         }
     },
     fallbackLng: "en",
-    debug: true,
+    debug: false,
 
     // have a common namespace used around the full app
     ns: ["translations"],
@@ -554,11 +558,9 @@ i18n.use(LanguageDetector).init({
     interpolation: {
         // escapeValue: false, // not needed for react!!
         formatSeparator: ","
-    },
+    }
 
-    // react: {
-    //     wait: true
-    // }
+
 });
 
 export default i18n;

@@ -76,7 +76,7 @@
 
       .sidenav-home-btn{
         margin:.5em 0;
-        @include font-fam-size( 1.8em, $main-font-2, bold, $white);
+        @include font-fam-size( 1.8em, futura, bold, $white);
         @include media(laptop) {
           font-size: 3em;
         }
@@ -86,7 +86,7 @@
     .nav-link-style {
       text-decoration: none;
       @include flex-display(flex, row-reverse, space-between, 100%);
-      @include font-fam-size( 2em, $main-font-2, bold, $white);
+      @include font-fam-size( 2em, futura, bold, $white);
       transition: 0.3s;
 
       @include media(iphone-plus) {
@@ -118,7 +118,7 @@
     .sideNav-sub__li--link {
 
       margin: .3em 0;
-      @include font-fam-size(1.2em, $main-font-1, 600, $text-yellow-main-l);
+      @include font-fam-size(1.2em, $main-font-2, 400, $text-yellow-main-l);
 
       @include media(iphone-plus) {
         font-size: 1.5em;
@@ -140,7 +140,7 @@
         text-align: left;
         margin: auto 0 ;
         .sidenav-noSub__Link--font{
-          @include font-fam-size( 1.3em, $main-font-2, bold, $white);
+          @include font-fam-size( 1.3em, futura, bold, $white);
           @include media(iphone-plus) {
             font-size: 1.5em;
           }

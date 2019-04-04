@@ -35,14 +35,14 @@
   }
   .intro__block--h2.english {
    position: absolute;
-    @include font-fam-size( 1.3em, $main-font-2, 400, $bademjoon-new);
+    @include font-fam-size( 1.4em, $main-font-2, 400, $bademjoon-new);
     bottom: -2em;
-    @include media(iphone-plus) {
-      font-size: 2em;
-    }
+    //@include media(iphone-plus) {
+    //  font-size: 2em;
+    //}
     @include media(laptop) {
       bottom: -1em;
-      font-size: 4em;
+      font-size: 3em;
     }
   }
   .intro__block--h2.farsi {
@@ -51,7 +51,7 @@
     bottom: -2em;
     @include media(laptop) {
       bottom: -1em;
-      font-size: 4em;
+      font-size: 3em;
     }
   }
   .image-head-slog {
@@ -250,29 +250,50 @@
         //margin-bottom: 1em;
         text-align: center;
         @include media(tablet) {
-          //font-size: 1.6em;
+          font-size: 1.3em;
         }
         @include media(laptop) {
-          font-size: .8em;
+          //font-size: .8em;
           margin-bottom: 1em;
+        }
+        @include media(desktop) {
+          font-size: 1em;
         }
       }
 
       .product-showcase__linkBlock__title__block{
         @include flex-display(flex, column, center, 100%, center);
-        padding-bottom: 1em;
+        @include media(tablet) {
+          margin: auto;
+          width: 60%;
+        }
+        @include media(laptop) {
+          margin: auto;
+          width: 80%;
+        }
+
+        @include media(tablet) {
+          padding-bottom: 1em;
+        }
+
         .title__block__row{
           @include flex-display(flex, row-reverse, space-evenly, 75%, center);
           .title__block__row--item{
             display: flex;
+            margin-bottom: .3em;
 
           h3{
             @include font-fam-size(1em, dovom, 400, $light-grey);
+            margin: 0;
             @include media(tablet) {
-              font-size: .5em;
+              font-size: .8em;
             }
             @include media(laptop) {
-              //font-size: .8em;
+              font-size: .5em;
+            }
+            @include media(desktop) {
+
+
             }
 
           }
@@ -289,6 +310,11 @@
             }
 
             @include media(laptop) {
+              width: 30px;
+              height: 30px;
+              margin-top: .2em;
+            }
+            @include media(desktop) {
               width: 40px;
               height: 40px;
               margin-top: .2em;
@@ -362,6 +388,15 @@
       //}
       .product-showcase__linkBlock__title__block{
         @include flex-display(flex, column, center, 100%, center);
+        @include media(tablet) {
+          margin: auto;
+          width: 60%;
+        }
+        @include media(laptop) {
+          margin: auto;
+          width: 100%;
+        }
+
           .title__block__row{
             padding-bottom: .5em;
             @include flex-display(flex, row, space-evenly, 45%, center);
@@ -372,7 +407,7 @@
             h3{
 
               @include font-fam-size(.8em, Futura, 400,$hard-gray );
-              //margin: 0;
+              margin: 0;
               @include media(tablet) {
                 //font-size: 1.1em;
               }

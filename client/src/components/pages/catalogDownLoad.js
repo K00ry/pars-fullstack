@@ -16,13 +16,20 @@ const catalogDownLoad = props =>{
                     <div style={insideStyles} className={`pages-header ${props.t("lang-class")}`}>
                         <div className='pages-header__block'>
                             <h2   className='pages-header__block--h2'>{props.t("contactUs")}</h2>
-                            <p   className='pages-header__block--p' >{props.t("contactUs-p")}</p>
+                            {/*<p   className='pages-header__block--p' >{props.t("contactUs-p")}</p>*/}
                         </div>
                     </div>
 
-
                 </div>
             </Parallax>
+
+
+            <div className="container">
+                <div className={`history-block ${props.t("lang-class")}`}>
+                    {/*<h2 className="history-block--title text-center">{props.t("pars-title-footer")}</h2>*/}
+                    <p className='pages-header__block--p' >{props.t("contactUs-p")}</p>
+                </div>
+            </div>
         </div>
 
 

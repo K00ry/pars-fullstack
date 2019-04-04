@@ -424,7 +424,7 @@
     @include font-fam-size(0.8em, dovom, bold, $text-black-m);
     margin: 2px;
     @include media(tablet) {
-      font-size: 1.3em;
+      font-size: 1em;
     }
     @include media(laptop) {
       //font-size: 2em
@@ -454,7 +454,7 @@
     @include font-fam-size(.8em, $main-font-1, 600, $text-black-m);
     margin: .1em;
     @include media(tablet) {
-      font-size: 1.3em;
+      font-size: 1em;
     }
     @include media(laptop) {
       //font-size: 2em
@@ -481,7 +481,7 @@
       width: 70%;
     }
     @include media(laptop) {
-      margin: 4em 0;
+      margin: 1em 0;
       width: 50%;
     }
 
@@ -507,6 +507,9 @@
     border-collapse: collapse;
     width: 100%;
     table-layout:fixed;
+    @include media(laptop) {
+      width: 50%;
+    }
 
   }
 

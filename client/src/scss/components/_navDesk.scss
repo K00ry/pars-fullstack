@@ -48,7 +48,7 @@
 
   }
 .dropdown-toggle{
-  @include font-fam-size(1.2em, asli, 400,$bademjoon-new );
+  @include font-fam-size(1.4em, asli, 400,$bademjoon-new );
   margin: auto;
   text-decoration: none;
   transition: all .2s ease-in-out;
@@ -95,8 +95,14 @@
 
     .nav-item__a{
       margin: auto;
-      @include font-fam-size(1.2em, Futura, 800,$bademjoon-new );
+
+      @include font-fam-size(.8em, Futura, 800,$bademjoon-new );
+
       transition: all .2s ease-in-out;
+      @include media(desktop) {
+
+        font-size: 1.2em;
+      }
 
       &:hover{
         text-decoration: underline;
@@ -106,14 +112,14 @@
     }
     .lang-select--english{
       margin: auto;
-      @include font-fam-size(1em, dovom, 600,$purple-new );
+      @include font-fam-size(1em, dovom, 600,$hard-gray );
       //line-height: 1;
     }
 
 
   }
   .dropdown-toggle{
-    @include font-fam-size(1.3em, Futura, 800,$bademjoon-new );
+    @include font-fam-size(1.5em, Futura, bold,$bademjoon-new );
     margin: auto;
     transition: all .2s ease-in-out;
 

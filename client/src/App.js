@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import { translate } from "react-i18next";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
+
 import { Consumer } from "./components/context";
 import Toolbar from "./components/toolbar/toolbar";
 import Admin from "./components/admin/admin";
@@ -48,9 +49,9 @@ const App = props => (
 
               <TransitionGroup component="main">
                 <CSSTransition
-                  timeout={500}
+                  timeout={300}
                   key={location.key}
-                  classNames="slide"
+                  classNames="page"
                 >
                   <Switch location={location}>
 

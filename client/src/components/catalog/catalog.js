@@ -4,8 +4,10 @@ import React, { Component } from "react";
 import CatalogGenre from "./catalogGenre";
 import ImgAndTable from "./imgAndTable/imgAndTable";
 import ImgGallery from "./imgGallery/imgGallery";
-import CatalogGenreDesktop from "./catalogDesktop/catalogGenreDesktop";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+// import CatalogGenreDesktop from "./catalogDesktop/catalogGenreDesktop";
+// import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+// import { CSSTransition } from 'react-transition-group';
+
 
 class Catalog extends Component {
   state = {
@@ -67,10 +69,10 @@ class Catalog extends Component {
       <div className="main">
         <div className="catalog-body container">
           {/*this component belongs only fo desktop view*/}
-          <CatalogGenreDesktop
-            mainData={this.props.mainOfMain}
-            t={this.props.t}
-          />
+          {/*<CatalogGenreDesktop*/}
+            {/*mainData={this.props.mainOfMain}*/}
+            {/*t={this.props.t}*/}
+          {/*/>*/}
 
           <div className="catalog-function">
             <div
@@ -100,14 +102,17 @@ class Catalog extends Component {
             </div>
 
             <div className="wrapper">
-              <ReactCSSTransitionGroup
-                transitionName="example"
-                transitionEnterTimeout={500}
-                transitionLeaveTimeout={10}
-                component="div"
-              >
+              {/*<ReactCSSTransitionGroup*/}
+                {/*transitionName="my-node-enter"*/}
+                {/*transitionEnterTimeout={500}*/}
+                {/*transitionLeaveTimeout={1}*/}
+                {/*component="div"*/}
+              {/*>*/}
+              {/*<CSSTransition*/}
+                  {/*// in={inProp}*/}
+                  {/*timeout={100} classNames="my-node">*/}
                 {galleryType}
-              </ReactCSSTransitionGroup>
+              {/*</CSSTransition>*/}
             </div>
           </div>
         </div>

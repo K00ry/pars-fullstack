@@ -46,6 +46,6 @@ const Toolbar = props => {
 };
 
 const mapSizesToProps = ({ width }) => ({
-  isMobile: width < 800
+  isMobile: width < 900
 });
 export default Sizes(mapSizesToProps)(Toolbar);
