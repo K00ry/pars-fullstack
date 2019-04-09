@@ -202,29 +202,25 @@
 
 
 .catalog-header__genres {
-  //position: absolute;
+
   @include flex-display(flex, row, space-around, 100%);
   list-style: none;
-  //top:6.5em;
+
   @include media(iphone-5) {
-    //top:6em;
+
   }
 
   padding: 0;
-  //margin-top: 2rem;
+
   @include media(tablet) {
-    //top:16em;
+
     margin: auto;
     padding: 1em 0;
     width: 100%;
     justify-content: space-around;
   }
   @include media(laptop) {
-    //top:12em;
-    //left: 10%;
     width: 80%;
-    //position: static;
-    //margin: auto;
   }
   .catalog-header__genres_navigation {
     cursor: pointer;
@@ -243,14 +239,14 @@
       from(#ffcc33),
       to(#cc9933)
     );
-    transition: all 1s;
+
     background-image: -webkit-linear-gradient(top, #ffcc33, #cc9933);
     background-image: -moz-linear-gradient(top, #ffcc33, #cc9933);
     background-image: -ms-linear-gradient(top, #ffcc33, #cc9933);
     background-image: -o-linear-gradient(top, #ffcc33, #cc9933);
     background-image: linear-gradient(to bottom, #ffcc33, #cc9933);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFCC33, endColorstr=#CC9933);
-
+    transition: all 0.5s ease-in-out;
     @include media(tablet) {
       height: 100%;
       margin: 0 1em;
@@ -281,7 +277,7 @@
     background-image: -o-linear-gradient(top, #ffcc33, $active-color);
     background-image: linear-gradient(to bottom, #ffcc33, $active-color);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFCC33, endColorstr=$active-color);
-    transition: all 0.5s ease-in-out;
+
     @include media(tablet) {
       margin: 0 1em;
       height: 100%;
@@ -292,12 +288,13 @@
   }
 
   .catalog-header__genres_navigation--btn-farsi {
-    transition: all 0.5s ease-in;
+
     @include font-fam-size(.7em, dovom-bold, bold, $text-dark);
 
     width: 100%;
     text-align: center;
     padding: .5em 0;
+    transition: all 0.5s ease-in;
     @include media(iphone-5) {
       font-size: 1em;
     }
@@ -305,7 +302,7 @@
       font-size: 1.2em;
     }
     @include media(laptop) {
-      //font-size: 2em
+
     }
   }
   .catalog-header__genres_navigation--btn-farsi .active {
@@ -337,7 +334,7 @@
   }
   .catalog-header__genres_navigation--btn-english .active {
 
-    font-size: .7;
+    font-size: .7em;
     padding: .5em 0;
     color: $hard-gray;
     @include media(iphone-5) {
@@ -496,12 +493,7 @@
     }
   }
 
-  //tr:nth-child(even) {
-  //  background-color: #cdcdcd;
-  //}
-  //tr:nth-child(odd) {
-  //  background-color: #e6e6e6;
-  //}
+
 
   table {
     border-collapse: collapse;

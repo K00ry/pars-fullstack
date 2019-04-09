@@ -20,6 +20,10 @@ i18n
                 "sideNav-class-select":"left",
                 "lang-class":"english",
 
+                //Downloading the catalog
+
+                "download-all":"Catalog Download",
+
                 "sideNav-home": "HOME",
                 "products": "PRODUCTS",
                 "jadval":"Kerbstone",
@@ -265,6 +269,8 @@ i18n
 
                 "overlay-paragraph":"Pars Jadval Founded in 1983 with a plan to produce concrete blocks. Since its early days the goal was to produce high quality products, resulting not only in the best products but also national attention and recognition.",
                 "labratory":"Considering the importance of produce quality of the wet curbstones and daily control of concrete, Pars Jadval is equipped with Concrete Testing Laboratory",
+                "produce":"Pars jadval did imported fully-automatic machines for wet press concrete kerbstones which is used all over EU and US.",
+                "packing":"We use craft paper that has wooden pulp for preventing concrete water leakage while loading in/out and delivering our products.",
                 "lab":"LABORATORY",
                 "pack":"PACKING & CURING",
                 "prod":"PRODUCTION",
@@ -282,6 +288,11 @@ i18n
                 "pars-title-footer": "پارس جدول",
                 "sideNav-class-select":"right",
                 "lang-class":"farsi",
+
+
+                //Downloading the catalog
+
+                "download-all":"دريافت کاتالوگ",
 
 
 
@@ -539,6 +550,8 @@ i18n
 
                 "overlay-paragraph":"کارخانه پارس جدول در سال ۱۳۶۲ با هدف تولید تیرچه و بلوک تاسيس گرديد. از همان ابتدا خط مشی و سیاست کلی شرکت تولید محصول مرغوب و با کیفیت مورد توجه قرار گرفت",
                 "labratory":"با توجه به اهمیت مصالح با کیفیت در نحوه تولید جداول خیس متراکم و همچنین کنترل روزانه بتن کارخانه پارس جدول مجهز به آزمایشگاه بتن کنترل کیفیت مصالح میباشد",
+                "produce":"پارس جدول اقدام به وارد كردن دستگاه هاى تمام اتوماتيك پيشرفته جداول بتنى كرده است كه از نوع خيس متراكم مى باشد كه در اكثر كشورهاى اروپايى و امريكايى مورد استفاده مى باشد.",
+                "packing":"در اين روش براى جلوگيرى از تخليه سيمان و بطور كلى شيره بتن به همراه آب در زمان تخليه آب اضافى، از نوعى كاغذ به نام \"كرافت\" كه داراى پالپ چوب است، نتيجأ بسيار مقاوم در برابر آب، به عنوان فيلتر استفاده مى شود.",
                 "lab":"آزمایشگاه",
                 "pack":"بسته بندی و دپو",
                 "prod":"تولید",

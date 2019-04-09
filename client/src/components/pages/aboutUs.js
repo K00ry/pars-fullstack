@@ -12,10 +12,10 @@ const insideStyles = {
 };
 const AboutUs = props => {
   const small =
-    process.env.PUBLIC_URL + "images/about/original/mobile/prod3.jpg";
+    process.env.PUBLIC_URL + "images/about/original/about-mob.jpg";
   const medium =
-    process.env.PUBLIC_URL + "images/about/original/mobile/prod3.jpg";
-  const large = process.env.PUBLIC_URL + "images/sizeset/new/contact-desk.jpg";
+    process.env.PUBLIC_URL + "images/about/original/about-mob.jpg";
+  const large = process.env.PUBLIC_URL + "images/about/original/about-desk.jpg";;
   return (
     <div className="main">
       <Parallax
@@ -67,7 +67,7 @@ const AboutUs = props => {
                   {props.t("prod")}
                 </h3>
                 <h4 className={`feature__block--text ${props.t("lang-class")}`}>
-                  {props.t("labratory")}
+                  {props.t("produce")}
                 </h4>
               </div>
             </Col>
@@ -92,7 +92,7 @@ const AboutUs = props => {
                   {props.t("pack")}
                 </h3>
                 <h4 className={`feature__block--text ${props.t("lang-class")}`}>
-                  {props.t("labratory")}
+                  {props.t("packing")}
                 </h4>
               </div>
             </Col>

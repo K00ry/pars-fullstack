@@ -6,7 +6,7 @@ const insideStyles = {background: 'transparent', padding: 20, position: 'absolut
 const Laboratory = props =>{
     const small = process.env.PUBLIC_URL + 'images/laboratory/original/mobile/lab1.jpg';
     const medium = process.env.PUBLIC_URL + 'images/laboratory/original/mobile/lab1.jpg';
-    const large = process.env.PUBLIC_URL + 'images/sizeset/new/contact-desk.jpg';
+    const large = process.env.PUBLIC_URL + 'images/laboratory/original/desk/lab2.jpg';
     return(
         <div className="main">
             <Parallax bgImage={small}

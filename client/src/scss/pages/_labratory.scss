@@ -1,12 +1,15 @@
 .pages-header.english{
   width: 80%;
   .pages-header__block--h2{
-    @include font-fam-size(2em, futura, bold, $white );
+    @include font-fam-size(2em, futura, 500, $white );
     text-align: center;
+    @include media(laptop) {
+      font-size: 2.2em;
+    }
 
   }
   .pages-header__block--p{
-    @include font-fam-size(1em, futura, bold, $white );
+    @include font-fam-size(1em, futura, 400, $white );
   }
 
 
@@ -14,13 +17,13 @@
 .pages-header.farsi{
   width: 80%;
   .pages-header__block--h2{
-    @include font-fam-size(3em, asli, bold, $white );
+    @include font-fam-size(3em, asli, 400, $white );
     text-align: center;
 
 
   }
   .pages-header__block--p{
-    @include font-fam-size(1em, dovom, bold, $white );
+    @include font-fam-size(1em, dovom, 400, $white );
     text-align: right;
   }
 

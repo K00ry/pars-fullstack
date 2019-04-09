@@ -33,11 +33,11 @@ class ContactPage extends Component {
       left: "50%",
       transform: "translate(-50%,-50%)"
     };
-    const small = process.env.PUBLIC_URL + "images/sizeset/new/contact-mob.jpg";
+    const small =
+        process.env.PUBLIC_URL + "images/sizeset/new/contact-mob2.jpg";
     const medium =
-      process.env.PUBLIC_URL + "images/sizeset/new/contact-tab.jpg";
-    const large =
-      process.env.PUBLIC_URL + "images/sizeset/new/contact-desk.jpg";
+        process.env.PUBLIC_URL + "images/sizeset/new/contact-desk2.jpg";
+    const large = process.env.PUBLIC_URL + "images/sizeset/new/contact-desk2.jpg";
 
     return (
       <div className="main">
