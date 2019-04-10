@@ -44,7 +44,11 @@ class TableWithPrice extends Component {
                 <th>N in Square meter</th>
                 <th>img route</th>
             </tr>;
-    }   else if (this.state.prodCheck === "dal" || this.state.prodCheck === "mozayik" || this.state.prodCheck === "kaval"){
+    }   else if (this.state.prodCheck === "dal" ||
+        this.state.prodCheck === "mozayik" ||
+        this.state.prodCheck === "kaval" ||
+        this.state.prodCheck === "mobleman" ||
+        this.state.prodCheck === "nj"){
         correctTableHead =
             <tr>
                 <th>{this.props.t("type")}</th>

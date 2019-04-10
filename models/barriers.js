@@ -5,8 +5,8 @@ const Schema = mongoose.Schema;
 
 
 const sizeSchema = new Schema({
-    type: { type: String, required: true },
-    kg:{ type: String, required: true }
+    type: String,
+    kg:String
 
 });
 

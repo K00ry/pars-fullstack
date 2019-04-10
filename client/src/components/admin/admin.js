@@ -129,7 +129,9 @@ class Admin extends Component {
       stateOfProduct === "kerbStone" ||
       stateOfProduct === "slabs" ||
       stateOfProduct === "rings" ||
-        stateOfProduct === "mosaics"
+        stateOfProduct === "mosaics" ||
+        stateOfProduct === "sites"  ||
+        stateOfProduct === "barriers"
     ) {
       rightForm = <KerbStoneRingsSlabsForm onType={this.koorysChange} />;
     } else if (stateOfProduct === "blocks") {

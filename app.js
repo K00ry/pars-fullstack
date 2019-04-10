@@ -7,7 +7,7 @@ const Pavers = require("./routes/pavers");
 const Slabs = require("./routes/slabs");
 const Mosaics = require("./routes/mosaics");
 const Rings = require("./routes/rings");
-const Furnish = require("./routes/sites");
+const Sites = require("./routes/sites");
 const Barriers = require("./routes/barriers");
 
 const bodyParser = require("body-parser");
@@ -60,8 +60,8 @@ app.use("/admin", Pavers);
 app.use("/admin", Slabs);
 app.use("/admin", Mosaics);
 app.use("/admin", Rings);
-// app.use("/admin", Furnish);
-// app.use("/admin", Barriers);
+app.use("/admin", Sites);
+app.use("/admin", Barriers);
 
 
 app.get("/*", (req, res) => {

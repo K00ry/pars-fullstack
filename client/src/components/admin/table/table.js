@@ -42,7 +42,10 @@ const Table = props => {
              <td>{props.img}</td>
              {removeButton}
          </tr>;
-        }   else if (props.check === "dal" || props.check === "mozayik" || props.check === "kaval"){
+        }   else if (props.check === "dal" ||
+     props.check === "mozayik" ||
+     props.check === "kaval" ||
+     props.check === "mobleman" || props.check === "nj"){
             correctTable =
              <tr>
                  <td>{props.t(props.type)}</td>

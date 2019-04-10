@@ -30,7 +30,7 @@ const SelectInput = props => (
       <option value="anbari">hayati</option>
       <option value="takhte">takhte</option>
     </optgroup>
-    <optgroup label="siteFurnish">
+    <optgroup label="sites">
       <option value="stopper">stopper</option>
       <option value="bench">bench</option>
     </optgroup>
