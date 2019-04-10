@@ -23,6 +23,17 @@ const LoadIn = props =>{
 
                 </div>
             </Parallax>
+
+
+
+            <div className="container">
+                <div className={`history-block ${props.t("lang-class")}`}>
+                    {/*<h2 className="history-block--title text-center">{props.t("pars-title-footer")}</h2>*/}
+                    <p className="history-block--p ">
+                        {props.t("packing")}
+                    </p>
+                </div>
+            </div>
             <div className='gallery-loadIn container'>
                 <div className="gallery-loadIn__block" >
 

@@ -5,9 +5,9 @@ const Schema = mongoose.Schema;
 
 
 const sizeSchema = new Schema({
-    type: { type: String, required: true },
-    price: { type: String, required: true },
-    shipping: { type: String, required: true }
+    type: String,
+    price: String,
+    shipping: String,
 });
 
 

@@ -16,7 +16,7 @@ const catalogDownLoad = props =>{
                 <div className="parallax-for-contactPage">
                     <div style={insideStyles} className={`pages-header ${props.t("lang-class")}`}>
                         <div className='pages-header__block'>
-                            <h2   className='pages-header__block--h2'>{props.t("contactUs")}</h2>
+                            <h2   className='pages-header__block--h2'>{props.t("catalog")}</h2>
                             {/*<p   className='pages-header__block--p' >{props.t("contactUs-p")}</p>*/}
                         </div>
                     </div>

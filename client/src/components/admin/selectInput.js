@@ -13,7 +13,7 @@ const SelectInput = props => (
     </optgroup>
     <optgroup label="pavers">
       <option value="khoshk">press khoshk</option>
-      <option value="wet">wet press</option>
+      <option value="press">wet press</option>
       <option value="vibrate">vibre</option>
       <option value="wash">wash betton</option>
     </optgroup>

@@ -28,13 +28,13 @@ const PaversMosaicsForm = props => {
       <br />
 
       <br />
-      <label htmlFor="SquareFeet">Peace In Square feet</label>
+      <label htmlFor="inSquarefeet">Peace In Square feet</label>
       <br />
       <input
         onChange={props.onType}
         type="text"
-        id="SquareFeet"
-        name="SquareFeet"
+        id="inSquarefeet"
+        name="inSquarefeet"
         placeholder="..."
       />
       <br />

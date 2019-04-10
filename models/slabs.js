@@ -3,13 +3,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-
 const sizeSchema = new Schema({
-    type: { type: String, required: true },
-    price: { type: String, required: true },
-    shipping: { type: String, required: true }
+    type: String,
+    size: String,
+    price: String,
+    shipping: String
 });
-
 
 const ProductSchema = new Schema({
     genreEn: String,
@@ -20,4 +19,5 @@ const ProductSchema = new Schema({
     sizes: [sizeSchema]
 });
 const Slabs = mongoose.model("slabs", ProductSchema);
+
 module.exports.Slabs = Slabs;

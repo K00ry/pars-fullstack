@@ -14,24 +14,43 @@ const Table = props => {
 
   let correctTable;
 
-  props.check === "jadval"
-    ? (correctTable = (
+ if( props.check === "jadval"){
+     correctTable =
         <tr>
           <td>{props.t(props.shipping)}</td>
           <td>{props.t(props.price)}</td>
           <td>{props.t(props.type)}</td>
           {removeButton}
-        </tr>
-      ))
-    : (correctTable = (
+        </tr>;
+
+
+ } else if(props.check === "blook"){
+   correctTable =
         <tr>
           <td>{props.t(props.shipping)}</td>
           <td>{props.t(props.price)}</td>
           <td>{props.t(props.size)}</td>
           <td>{props.t(props.type)}</td>
           {removeButton}
-        </tr>
-      ));
+        </tr>;
+
+     } else if (props.check === "kafpoosh"){
+     correctTable =
+         <tr>
+             <td>{props.t(props.type)}</td>
+             <td>{props.t(props.square)}</td>
+             <td>{props.img}</td>
+             {removeButton}
+         </tr>;
+        }   else if (props.check === "dal" || props.check === "mozayik" || props.check === "kaval"){
+            correctTable =
+             <tr>
+                 <td>{props.t(props.type)}</td>
+
+                 {removeButton}
+             </tr>;
+ }
+
 
   return correctTable;
 };

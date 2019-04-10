@@ -19,24 +19,37 @@ class TableWithPrice extends Component {
   }
 
   render() {
-    console.log(this.props.fromServer);
+
     let correctTableHead;
-    this.state.prodCheck === "jadval"
-      ? (correctTableHead = (
+    if(this.state.prodCheck === "jadval"){
+      correctTableHead =
           <tr>
             <th className="tg-6xid">{this.props.t("ship")}</th>
             <th className="tg-4s02">{this.props.t("price")}</th>
             <th>{this.props.t("sizes")}</th>
-          </tr>
-        ))
-      : (correctTableHead = (
+          </tr>;
+
+    } else if (this.state.prodCheck === "blook"){
+       correctTableHead =
           <tr>
             <th className="tg-6xid">{this.props.t("ship")}</th>
             <th className="tg-4s02">{this.props.t("price")}</th>
             <th>{this.props.t("sizes")}</th>
             <th>{this.props.t("type")}</th>
-          </tr>
-        ));
+          </tr>;
+    } else if (this.state.prodCheck === "kafpoosh"){
+        correctTableHead =
+            <tr>
+                <th>{this.props.t("model")}</th>
+                <th>N in Square meter</th>
+                <th>img route</th>
+            </tr>;
+    }   else if (this.state.prodCheck === "dal" || this.state.prodCheck === "mozayik" || this.state.prodCheck === "kaval"){
+        correctTableHead =
+            <tr>
+                <th>{this.props.t("type")}</th>
+            </tr>;
+    }
 
     return (
       <table className={`tg-${this.props.t("lang-class")}`}>
@@ -51,9 +64,11 @@ class TableWithPrice extends Component {
               key={index}
               id={kbj._id}
               type={kbj.type}
+              img={kbj.img}
               price={kbj.price}
               shipping={kbj.shipping}
               size={kbj.size}
+              square={kbj.inSquarefeet}
               t={this.props.t}
             />
           ))}
