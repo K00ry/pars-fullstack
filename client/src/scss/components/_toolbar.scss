@@ -5,8 +5,8 @@ header {
 }
 
 .inCatalog{
-  position: relative;
-  background-color: $light-grey;
+  //position: relative;
+  background-color: transparent;
 
 
 
@@ -240,65 +240,7 @@ nav {
 //  width: 100%;
 //}
 
-.lang-select {
-  width: 100%;
-  //background: $text-dark;
-  display: flex;
-  //margin: 0 2em;
 
-  .lang-select--english {
-
-    padding: .2em;
-    @include font-fam-size(0.8em, dovom, 500, $hard-gray);
-    outline: none;
-    //padding: 4px;
-    padding: 0 1em;
-    //margin: auto 1em;
-    //background: $light-grey;
-    //border: 2px solid $text-yellow-main;
-    //border-radius: 20px;
-    @include media(iphone-plus) {
-      font-size: 1em;
-
-    }
-    @include media(tablet) {
-      //font-size: .7em;
-      padding: .5em;
-
-    }
-
-    @include media(laptop) {
-      font-size: 1.4em;
-      padding: 0;
-      margin: .5em .5em;
-
-    }
-  }
-
-  .lang-select--farsi {
-    @include font-fam-size(0.8em, $main-font-2, 500, $hard-gray);
-    outline: none;
-    padding: 0 1em;
-    //margin: auto 1em;
-
-    @include media(iphone-plus) {
-      font-size: 1em;
-      padding: .2em;
-    }
-    @include media(tablet) {
-
-      padding: .5em;
-
-    }
-
-    @include media(laptop) {
-      font-size: 1.4em;
-      padding: 0;
-      margin: .5em .5em;
-
-    }
-  }
-}
 
 ///////////////////
 

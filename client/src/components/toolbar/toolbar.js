@@ -20,7 +20,9 @@ const Toolbar = props => {
         let position = catalogMount ? "inCatalog" : " ";
 
         return (
-          <header className={position}>
+          <header
+              className={position}
+          >
             <Headroom disableInlineStyles className="container-fluid">
               {/*<div className="lang-select">*/}
               {/*<span*/}
@@ -44,6 +46,6 @@ const Toolbar = props => {
 };
 
 const mapSizesToProps = ({ width }) => ({
-  isMobile: width < 800
+  isMobile: width < 900
 });
 export default Sizes(mapSizesToProps)(Toolbar);

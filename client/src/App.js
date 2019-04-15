@@ -3,13 +3,14 @@ import { Route, Switch } from "react-router-dom";
 import { translate } from "react-i18next";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
+
 import { Consumer } from "./components/context";
 import Toolbar from "./components/toolbar/toolbar";
 import Admin from "./components/admin/admin";
 import SideDrawer from "./components/sidedrawer/sidedrawer";
 import MainContainer from "./components/mainContainer/mainContainer";
 import Catalog from "./components/catalog/catalog";
-import ContactPage from "./components/contact/contactPage";
+import ContactPage from "./components/pages/contactPage";
 import BackDrop from "./components/toolbar/backDrop";
 import LoadIn from "./components/pages/loadIn";
 import CatalogDownLoad from "./components/pages/catalogDownLoad";
@@ -44,13 +45,13 @@ const App = props => (
             <div className="App">
               <Toolbar t={t} i18n={i18n} />
               <BackDrop />
-              <SideDrawer t={props.t} />
+              <SideDrawer t={props.t} i18n={i18n} />
 
               <TransitionGroup component="main">
                 <CSSTransition
-                  timeout={500}
+                  timeout={300}
                   key={location.key}
-                  classNames="slide"
+                  classNames="page"
                 >
                   <Switch location={location}>
 

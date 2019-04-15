@@ -8,16 +8,28 @@ class SideDrawer extends Component {
     return (
       <Consumer>
         {({ actions, openDrawer }) => {
+          const { i18n } = this.props;
           let sideDraw = "sidenav";
           if (openDrawer) {
             sideDraw = "sidenav nav-open";
           }
+          let langString;
+          let lang = this.props.i18n.language;
+          lang === "en" ? (lang = "fa") : (lang = "en");
+          lang === "en" ? (langString = "English") : (langString = "فارسی");
+          const toggle = lng => i18n.changeLanguage(lng);
 
           return (
             <div
               id="mySidenav"
               className={`${this.props.t("lang-class")} ${sideDraw}`}
             >
+              <span
+                  className={`lang-select--${this.props.t("lang-class")}`}
+                  onClick={() => toggle(lang)}
+              >
+                {langString}
+              </span>
               <div onClick={actions.handleOpeningDrawer} className="closebtn">
                 ×
               </div>

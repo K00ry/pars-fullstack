@@ -1,21 +1,24 @@
 const express = require("express");
 const path = require("path");
 const mainRoutes = require("./routes");
-
 const KerbStoneroutes = require("./routes/kerbStone");
-
 const Blocks = require("./routes/blocks");
+const Pavers = require("./routes/pavers");
+const Slabs = require("./routes/slabs");
+const Mosaics = require("./routes/mosaics");
+const Rings = require("./routes/rings");
+const Sites = require("./routes/sites");
+const Barriers = require("./routes/barriers");
 
 const bodyParser = require("body-parser");
 // const cookieParser = require("cookie-parser");
 
 const app = express();
-// const logger = require("morgan");
-//
-// app.use(logger("dev"));
+const logger = require("morgan");
+
+app.use(logger("dev"));
 app.use(bodyParser.json());
-// app.use(cookieParser());
-// app.set("view engine", "pug");
+
 app.use(express.static(path.join(__dirname, "client/build")));
 
 var mongoose = require("mongoose");
@@ -37,6 +40,7 @@ mongoose.connect(
 
 const db = mongoose.connection;
 
+
 db.on("error", err => {
   console.error("connection error:", err);
 
@@ -47,9 +51,19 @@ db.once("open", () => {
 
 });
 
+
+
 app.use("/", mainRoutes);
 app.use("/admin", KerbStoneroutes);
 app.use("/admin", Blocks);
+app.use("/admin", Pavers);
+app.use("/admin", Slabs);
+app.use("/admin", Mosaics);
+app.use("/admin", Rings);
+app.use("/admin", Sites);
+app.use("/admin", Barriers);
+
+
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build/index.html'));
 });
