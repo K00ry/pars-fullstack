@@ -1,13 +1,14 @@
 .catalog-body{
   margin: auto;
-  max-width: 1700px;
+  //max-width: 1700px;
   @include media(laptop) {
+    padding-top: 5em;
     @include flex-display(flex, row-reverse, center, 100%);
-    border-bottom: 1px solid $hard-gray-l;
+    //border-bottom: 1px solid $hard-gray-l;
 
   }
   @include media(desktop) {
-    border: 1px solid $hard-gray ;
+    //border: 1px solid $hard-gray ;
 
 
   }
@@ -27,6 +28,27 @@
     @include flex-display(flex, column, flex-start, 40%);
   }
 }
+.desktop-sideGenre-title.farsi{
+  width:100%;
+  padding: 3em 0 ;
+  background: $bademjoon-new;
+  h2{
+    @include font-fam-size( 3em, asli, bold, $text-yellow-main);
+    margin: auto;
+    text-align:center;
+  }
+}
+
+.desktop-sideGenre-title.english{
+  width:100%;
+  padding: 3em 0 ;
+  background: $bademjoon-new;
+  h2{
+    @include font-fam-size( 3em, $main-font-2, 500, $text-yellow-main);
+    margin: auto;
+    text-align:center;
+  }
+}
 
 .home-genres{
   height: 100%;
@@ -34,31 +56,10 @@
   @include flex-display(flex, row, space-around, 100%, center);
   flex-wrap:wrap;
 
-  background-color: $hard-gray;
-  .home-genres-title.farsi{
+  background-color: $bademjoon-new;
 
-    width:100%;
-    padding: 3em 0 ;
-    background-color: $hard-gray-l;
-    h2{
-      @include font-fam-size( 3em, asli, bold, $text-yellow-main);
-      margin: auto;
-      text-align:center;
-    }
-  }
-  .home-genres-title.english{
-
-    width:100%;
-    padding: 3em 0 ;
-    background-color: $hard-gray-l;
-    h2{
-      @include font-fam-size( 3em, $main-font-2, 500, $text-yellow-main);
-      margin: auto;
-      text-align:center;
-    }
-  }
   .home-genre__item{
-    @include flex-display(flex, column, space-evenly, 50%, center);
+    @include flex-display(flex, column, space-evenly, 35%, center);
     //background-color:  $light-grey;
 
     //border: 1px solid $hard-gray-l;
@@ -78,14 +79,14 @@
 
 
     .home-genres__item--title.english{
-      @include font-fam-size( 2em, $main-font-1, 400, rgba($text-yellow-main,0.8));
+      @include font-fam-size( 1.3em, futura, 400, rgba($text-yellow-main,0.8));
       padding: .5em 0;
       width: 100%;
       text-align: center;
 
     }
     .home-genres__item--title.farsi{
-      @include font-fam-size( 2em, dovom, 400, rgba($text-yellow-main,0.8));
+      @include font-fam-size( 1.3em, dovom, 400, rgba($text-yellow-main,0.8));
       padding: .5em 0;
       width: 100%;
       text-align: center;
@@ -126,24 +127,26 @@
   }
   @include flex-display(flex, column, center, 100%);
   .catalog-header__title {
-
-
     padding: 1em 0;
+    margin-bottom: 1em;
+    margin-top: 3em;
     @include media(tablet) {
-      margin: 3em auto;
+      //margin:0;
+      //margin: 3em auto;
     }
     @include media(laptop) {
       margin: 1em auto;
     }
 
     .catalog-header__title_info {
+
       text-align: center;
       @include font-fam-size(3em, asli, bold, $text-dark );
       padding: 0;
       margin: auto;
       @include media(tablet) {
-        padding: .6em 0;
-        font-size: 4em;
+        //padding: .6em 0;
+        //font-size: 4em;
       }
       @include media(laptop) {
 
@@ -173,20 +176,22 @@
   }
   .catalog-header__title {
     padding: 1em 0;
+    margin-bottom: 1em;
+    margin-top: 3em;
     @include media(tablet) {
-      margin: 3em auto;
+      //margin: 3em auto;
     }
     @include media(laptop) {
       margin: 1em auto;
     }
     .catalog-header__title_info {
       text-align: center;
-      @include font-fam-size(3em, $main-font-2, bold, $text-dark );
+      @include font-fam-size(3em, futura, bold, $text-dark );
       margin: auto;
       @include media(tablet) {
-        padding: .6em 0;
+        //padding: .6em 0;
 
-        font-size: 4em;
+        //font-size: 4em;
       }
       @include media(laptop) {
 
@@ -197,29 +202,25 @@
 
 
 .catalog-header__genres {
-  position: absolute;
+
   @include flex-display(flex, row, space-around, 100%);
   list-style: none;
-  top:6.5em;
+
   @include media(iphone-5) {
-    top:6em;
+
   }
 
   padding: 0;
-  //margin-top: 2rem;
+
   @include media(tablet) {
-    top:16em;
+
     margin: auto;
     padding: 1em 0;
     width: 100%;
     justify-content: space-around;
   }
   @include media(laptop) {
-    top:12em;
-    left: 10%;
     width: 80%;
-    //position: static;
-    //margin: auto;
   }
   .catalog-header__genres_navigation {
     cursor: pointer;
@@ -238,14 +239,14 @@
       from(#ffcc33),
       to(#cc9933)
     );
-    transition: all 1s;
+
     background-image: -webkit-linear-gradient(top, #ffcc33, #cc9933);
     background-image: -moz-linear-gradient(top, #ffcc33, #cc9933);
     background-image: -ms-linear-gradient(top, #ffcc33, #cc9933);
     background-image: -o-linear-gradient(top, #ffcc33, #cc9933);
     background-image: linear-gradient(to bottom, #ffcc33, #cc9933);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFCC33, endColorstr=#CC9933);
-
+    transition: all 0.5s ease-in-out;
     @include media(tablet) {
       height: 100%;
       margin: 0 1em;
@@ -276,7 +277,7 @@
     background-image: -o-linear-gradient(top, #ffcc33, $active-color);
     background-image: linear-gradient(to bottom, #ffcc33, $active-color);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFCC33, endColorstr=$active-color);
-    transition: all 0.5s ease-in-out;
+
     @include media(tablet) {
       margin: 0 1em;
       height: 100%;
@@ -287,20 +288,21 @@
   }
 
   .catalog-header__genres_navigation--btn-farsi {
-    transition: all 0.5s ease-in;
+
     @include font-fam-size(.7em, dovom-bold, bold, $text-dark);
 
     width: 100%;
     text-align: center;
     padding: .5em 0;
+    transition: all 0.5s ease-in;
     @include media(iphone-5) {
       font-size: 1em;
     }
     @include media(tablet) {
-      font-size: 1.5em;
+      font-size: 1.2em;
     }
     @include media(laptop) {
-      //font-size: 2em
+
     }
   }
   .catalog-header__genres_navigation--btn-farsi .active {
@@ -323,7 +325,7 @@
       font-size: 1em;
     }
     @include media(tablet) {
-      font-size: 1.5em;
+      font-size: 1.2em;
 
     }
     @include media(laptop) {
@@ -332,7 +334,7 @@
   }
   .catalog-header__genres_navigation--btn-english .active {
 
-    font-size: .7;
+    font-size: .7em;
     padding: .5em 0;
     color: $hard-gray;
     @include media(iphone-5) {
@@ -419,7 +421,7 @@
     @include font-fam-size(0.8em, dovom, bold, $text-black-m);
     margin: 2px;
     @include media(tablet) {
-      font-size: 1.3em;
+      font-size: 1em;
     }
     @include media(laptop) {
       //font-size: 2em
@@ -449,7 +451,7 @@
     @include font-fam-size(.8em, $main-font-1, 600, $text-black-m);
     margin: .1em;
     @include media(tablet) {
-      font-size: 1.3em;
+      font-size: 1em;
     }
     @include media(laptop) {
       //font-size: 2em
@@ -476,7 +478,7 @@
       width: 70%;
     }
     @include media(laptop) {
-      margin: 4em 0;
+      margin: 1em 0;
       width: 50%;
     }
 
@@ -491,17 +493,15 @@
     }
   }
 
-  tr:nth-child(even) {
-    background-color: #cdcdcd;
-  }
-  tr:nth-child(odd) {
-    background-color: #e6e6e6;
-  }
+
 
   table {
     border-collapse: collapse;
     width: 100%;
     table-layout:fixed;
+    @include media(laptop) {
+      width: 50%;
+    }
 
   }
 
@@ -514,22 +514,22 @@
 
 
   th {
-    @include font-fam-size(1.2em, $main-font-1, 400, $text-black-m);
+    @include font-fam-size(1em, $main-font-1, 400, $text-black-m);
     padding: .5em;
     text-align: center; // background-color: #f5f5f5;
     @include media(tablet) {
-      font-size: 1.6em;
+      //font-size: 1.6em;
     }
     @include media(laptop) {
       //font-size: 2em;
     }
   }
   td {
-    @include font-fam-size(1.2em, $main-font-1, 400, $text-black-m);
+    @include font-fam-size(0.8em, $main-font-1, 400, $bademjoon-new);
     padding: .5em;
     text-align: center; // background-color: #f5f5f5;
     @include media(tablet) {
-      font-size: 1.6em;
+      //font-size: 1.6em;
     }
     @include media(laptop) {
       //font-size: 2em;
@@ -544,22 +544,22 @@
   //width: 80%;
   //}
   th {
-    @include font-fam-size(1.2em, dovom-bold, 400, $text-black-m);
+    @include font-fam-size(1em, dovom-bold, 400, $bademjoon-new);
     padding: .5em;
     text-align: center; // background-color: #f5f5f5;
     @include media(tablet) {
-      font-size: 1.6em;
+      //font-size: 1em;
     }
     @include media(laptop) {
       //font-size: 2em;
     }
   }
   td {
-    @include font-fam-size(1.2em, dovom, 400, $text-black-m);
+    @include font-fam-size(.8em, dovom, 400, $bademjoon-new);
     padding: .5em;
     text-align: center; // background-color: #f5f5f5;
     @include media(tablet) {
-   font-size: 1.6em;
+   //font-size: 1.6em;
     }
     @include media(laptop) {
       //font-size: 2em;

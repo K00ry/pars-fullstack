@@ -1,15 +1,20 @@
 .history-block.farsi{
-  margin: auto;
-  width:60%;
+  padding-top:2em;
+
   display: flex;
   .history-block--title{
     @include font-fam-size( 2.3em, asli, bold, $text-yellow-main );
   }
   .history-block--p{
     margin: auto;
-    text-align: center;
-    padding: 1em .5em ;
-    @include font-fam-size( 2em, dovom, bold, $bademjoon-new );
+    text-align: right;
+    padding: 1em 0em ;
+    @include font-fam-size( 1.4em, dovom, 400, $bademjoon-new );
+    @include media(laptop) {
+      font-size: 1.6em;
+
+
+    }
 
   }
 }
@@ -17,16 +22,22 @@
 
 
 .history-block.english{
-  margin: auto;
+  padding-top:2em;
+  //margin: auto;
   display: flex;
-  width:60%;
+  //width:60%;
   .history-block--title{
     @include font-fam-size( 2.3em, Futura, bold, $text-yellow-main );
   }
   .history-block--p{
 
     padding: 1em .5em ;
-    @include font-fam-size( 2em, Futura, bold, $bademjoon-new );
+    @include font-fam-size( 1.4em, Futura, 400, $bademjoon-new );
+    @include media(laptop) {
+      font-size: 1.6em;
+
+
+    }
 
   }
 }
@@ -37,8 +48,7 @@
   padding-top: 2em;
   padding-bottom: 2em;
   @include media(desktop) {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding:2em 0;
   }
 }
 
@@ -78,7 +88,7 @@
     }
     .feature__block--title.farsi{
       text-align: right;
-      @include font-fam-size( 1.3em, asli, bold, $hard-gray-l );
+      @include font-fam-size( 1.3em, asli, bold, $bademjoon-new );
       @include media(tablet) {
         font-size: 1.4em;
       }
@@ -91,7 +101,7 @@
 
     }
     .feature__block--title.english{
-      @include font-fam-size( 1.3em, $main-font-2, 400, $hard-gray-l );
+      @include font-fam-size( 1.3em, $main-font-2, 400, $bademjoon-new );
       @include media(tablet) {
         font-size: 1.4em;
       }

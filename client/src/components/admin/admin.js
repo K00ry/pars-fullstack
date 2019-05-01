@@ -20,7 +20,10 @@ class Admin extends Component {
     addedToDB: [],
     type: "",
     price: "",
-    shipping: ""
+    shipping: "",
+    size:"",
+    img:"",
+    inSquarefeet:""
   };
 
   // componentDidMount() {
@@ -112,6 +115,7 @@ class Admin extends Component {
       },
       () => this.dataFetchCall(this.state.genreEn, this.state.genreId)
     );
+    console.log(this.state.FromServer)
   };
 
   koorysChange = e => {
@@ -124,7 +128,10 @@ class Admin extends Component {
     if (
       stateOfProduct === "kerbStone" ||
       stateOfProduct === "slabs" ||
-      stateOfProduct === "rings"
+      stateOfProduct === "rings" ||
+        stateOfProduct === "mosaics" ||
+        stateOfProduct === "sites"  ||
+        stateOfProduct === "barriers"
     ) {
       rightForm = <KerbStoneRingsSlabsForm onType={this.koorysChange} />;
     } else if (stateOfProduct === "blocks") {

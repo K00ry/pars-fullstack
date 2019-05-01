@@ -12,10 +12,10 @@ const insideStyles = {
 };
 const AboutUs = props => {
   const small =
-    process.env.PUBLIC_URL + "images/about/original/mobile/prod3.jpg";
+    process.env.PUBLIC_URL + "images/about/original/about-mob.jpg";
   const medium =
-    process.env.PUBLIC_URL + "images/about/original/mobile/prod3.jpg";
-  const large = process.env.PUBLIC_URL + "images/sizeset/new/contact-desk.jpg";
+    process.env.PUBLIC_URL + "images/about/original/about-mob.jpg";
+  const large = process.env.PUBLIC_URL + "images/about/original/about-desk.jpg";;
   return (
     <div className="main">
       <Parallax
@@ -27,11 +27,11 @@ const AboutUs = props => {
         <div className="parallax-for-contactPage">
           <div
             style={insideStyles}
-            className={`contact-us ${props.t("lang-class")}`}
+            className={`pages-header ${props.t("lang-class")}`}
           >
-            <div className="contact-us__block">
-              <h2 className="contact-us__block--h2">{props.t("about")}</h2>
-              {/*<p   className='contact-us__block--p' >{props.t("contactUs-p")}</p>*/}
+            <div className="pages-header__block">
+              <h2 className="pages-header__block--h2">{props.t("about")}</h2>
+              {/*<p   className='pages-header__block--p' >{props.t("contactUs-p")}</p>*/}
             </div>
           </div>
         </div>
@@ -40,7 +40,7 @@ const AboutUs = props => {
         <div className={`history-block ${props.t("lang-class")}`}>
           {/*<h2 className="history-block--title text-center">{props.t("pars-title-footer")}</h2>*/}
 
-          <p className="history-block--p text-center">
+          <p className="history-block--p ">
             {props.t("overlay-paragraph")}
           </p>
         </div>
@@ -67,7 +67,7 @@ const AboutUs = props => {
                   {props.t("prod")}
                 </h3>
                 <h4 className={`feature__block--text ${props.t("lang-class")}`}>
-                  {props.t("labratory")}
+                  {props.t("produce")}
                 </h4>
               </div>
             </Col>
@@ -92,7 +92,7 @@ const AboutUs = props => {
                   {props.t("pack")}
                 </h3>
                 <h4 className={`feature__block--text ${props.t("lang-class")}`}>
-                  {props.t("labratory")}
+                  {props.t("packing")}
                 </h4>
               </div>
             </Col>

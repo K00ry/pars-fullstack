@@ -4,10 +4,11 @@ import HomeGenres from "./homeGenres";
 const CatalogGenreDesktop = props => {
   return (
     <div className="desktop-sideGenre">
-      <div className="home-genres">
-        <div className={`home-genres-title ${props.t("lang-class")}`}>
-          <h2>{props.t("products")}</h2>
+        <div className={`desktop-sideGenre-title ${props.t("lang-class")}`}>
+            <h2>{props.t("products")}</h2>
         </div>
+      <div className="home-genres">
+
         {props.mainData.map((arr, index) => (
           <HomeGenres
             key={index}

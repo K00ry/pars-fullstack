@@ -2,7 +2,7 @@
 
 .intro{
   height: 100vh;
-  background: $background-White url("./svg/main.svg") no-repeat center  ;
+  background: $background-White url("./svg/main2.svg") no-repeat center  ;
   background-size: contain;
   display: flex;
   @include media(iphone-plus) {
@@ -35,14 +35,14 @@
   }
   .intro__block--h2.english {
    position: absolute;
-    @include font-fam-size( 1.3em, $main-font-2, 400, $bademjoon-new);
+    @include font-fam-size( 1.4em, $main-font-2, 400, $bademjoon-new);
     bottom: -2em;
-    @include media(iphone-plus) {
-      font-size: 2em;
-    }
+    //@include media(iphone-plus) {
+    //  font-size: 2em;
+    //}
     @include media(laptop) {
       bottom: -1em;
-      font-size: 4em;
+      font-size: 3em;
     }
   }
   .intro__block--h2.farsi {
@@ -50,7 +50,8 @@
     @include font-fam-size( 1.4em, asli, bold, $bademjoon-new);
     bottom: -2em;
     @include media(laptop) {
-      font-size: 4em;
+      bottom: -1em;
+      font-size: 3em;
     }
   }
   .image-head-slog {
@@ -90,17 +91,17 @@
     background:transparent;
     //position: absolute;
     //bottom: 10%;
-   padding: 1em;
+   padding: 1em 0;
     @include flex-display(flex, column, space-evenly, 90%, flex-end);
     text-align: right;
     @include media(iphone-plus) {
       width: 80%;
     }
     @include media(tablet) {
-      width: 60%;
+      width: 100%;
     }
     .overlaySection__card--title{
-      @include font-fam-size( 2.3em, asli, bold, $yellow-new-l );
+      @include font-fam-size( 2.3em, asli, bold, $purple-new );
       margin: 0 0 .5em 0 ;
       @include media(tablet) {
         font-size: 4em;
@@ -131,12 +132,12 @@
   .overlaySection__card{
     background:transparent;
     //position: absolute;
-    padding: 1em;
+    padding: 1em 0;
     @include media(iphone-plus) {
       width: 80%;
     }
     @include media(tablet) {
-      width: 60%;
+      width: 100%;
     }
     @include flex-display(flex, column, space-evenly, 90%, flex-start);
     text-align: left;
@@ -173,7 +174,7 @@
 .main {
   width: 100%;
   margin: auto;
-  background: $background-White url("./svg/triangle6.svg") no-repeat center  ;
+  background: $background-White url("./svg/triangle6.svg") no-repeat bottom  ;
   background-size: cover;
 
 
@@ -237,45 +238,62 @@
 
 
 }
+
 .product-showcase__items.farsi{
-
-
   .product-showcase__linkBlock{
-
-
-
     .product-showcase__linkBlock__title{
       width: 100%;
-      //background-color: $background-White;
-      //box-shadow: 0 1px 6px 0 silver;
+
       h2{
 
         @include font-fam-size(1.3em, asli, 400, $bademjoon-new);
-        margin-bottom: 1em;
+        //margin-bottom: 1em;
         text-align: center;
         @include media(tablet) {
-          font-size: 1.6em;
+          font-size: 1.3em;
         }
         @include media(laptop) {
+          //font-size: .8em;
+          margin-bottom: 1em;
+        }
+        @include media(desktop) {
           font-size: 1em;
         }
       }
 
       .product-showcase__linkBlock__title__block{
         @include flex-display(flex, column, center, 100%, center);
-        padding-bottom: 1em;
+        @include media(tablet) {
+          margin: auto;
+          width: 60%;
+        }
+        @include media(laptop) {
+          margin: auto;
+          width: 80%;
+        }
+
+        @include media(tablet) {
+          padding-bottom: 1em;
+        }
+
         .title__block__row{
           @include flex-display(flex, row-reverse, space-evenly, 75%, center);
           .title__block__row--item{
             display: flex;
+            margin-bottom: .3em;
 
           h3{
             @include font-fam-size(1em, dovom, 400, $light-grey);
+            margin: 0;
             @include media(tablet) {
-              font-size: 1em;
+              font-size: .8em;
             }
             @include media(laptop) {
-              font-size: .8em;
+              font-size: .5em;
+            }
+            @include media(desktop) {
+
+
             }
 
           }
@@ -292,6 +310,11 @@
             }
 
             @include media(laptop) {
+              width: 30px;
+              height: 30px;
+              margin-top: .2em;
+            }
+            @include media(desktop) {
               width: 40px;
               height: 40px;
               margin-top: .2em;
@@ -355,7 +378,8 @@
           font-size: 1.5em;
         }
         @include media(laptop) {
-          font-size: 3.3em;
+          font-size: 3em;
+          margin-bottom: 1em;
         }
       }
       //h3{
@@ -364,6 +388,15 @@
       //}
       .product-showcase__linkBlock__title__block{
         @include flex-display(flex, column, center, 100%, center);
+        @include media(tablet) {
+          margin: auto;
+          width: 60%;
+        }
+        @include media(laptop) {
+          margin: auto;
+          width: 100%;
+        }
+
           .title__block__row{
             padding-bottom: .5em;
             @include flex-display(flex, row, space-evenly, 45%, center);
@@ -374,12 +407,12 @@
             h3{
 
               @include font-fam-size(.8em, Futura, 400,$hard-gray );
-              //margin: 0;
+              margin: 0;
               @include media(tablet) {
-                font-size: 1.1em;
+                //font-size: 1.1em;
               }
               @include media(laptop) {
-                font-size: 2.1em;
+                font-size: 1.8em;
               }
 
             }

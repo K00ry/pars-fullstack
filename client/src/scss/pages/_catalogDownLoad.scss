@@ -1,0 +1,64 @@
+.download-links{
+  @include flex-display(flex,row,space-around,100%);
+
+
+    .download-links__link{
+      @include flex-display(flex,row,space-around,40%);
+      text-decoration: underline;
+
+      padding: 5em 0;
+      @include media(tablet) {
+        width: 40%;
+      }
+      @include media(laptop) {
+        padding: 10em 0;
+        width: 30%;
+      }
+
+
+      &:hover{
+
+        .file-svg {
+          fill:$light-grey;
+        }
+        a{
+          color:$light-grey;
+        }
+
+
+      }
+      .file-svg {
+        margin: auto 0;
+        position: unset;
+        height: 15px;
+        width: 15px;
+        fill: $bademjoon-new;
+        @include media(tablet) {
+          height: 25px;
+          width: 25px;
+        }
+      }
+
+      .english{
+        margin:auto 0;
+        @include font-fam-size(1em,futura,600,$bademjoon-new);
+        line-height: 0;
+        @include media(tablet) {
+         font-size: 2em;
+        }
+        @include media(laptop) {
+          font-size: 2em;
+        }
+      }
+      .farsi{
+        margin:auto 0;
+        @include font-fam-size(1em,asli,600,$bademjoon-new);
+        @include media(tablet) {
+          font-size: 2em;
+        }
+        @include media(laptop) {
+          font-size: 2em;
+        }
+      }
+    }
+}
