@@ -3,13 +3,13 @@ services:
   server:
     build:
       context: ./server/
-    command: /usr/app/node_modules/.bin/nodemon src/index.js
+    command: /usr/app/node_modules/.bin/nodemon app.js
     volumes:
       - ./server/:/usr/app
       - /usr/app/node_modules
     ports:
       - "8080:8080"
-    env_file: ./server/.env
+    env_file: ./server/nodemon.json
     environment:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
