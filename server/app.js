@@ -1,5 +1,5 @@
 const express = require("express");
- // require('dotenv').config();
+const forceHttps = require('@crystallize/elasticloadbalancer-express-force-https');
 const path = require("path");
 const mainRoutes = require("./routes");
 const KerbStoneroutes = require("./routes/kerbStone");
@@ -11,11 +11,13 @@ const Rings = require("./routes/rings");
 const Sites = require("./routes/sites");
 const Barriers = require("./routes/barriers");
 
+
 const bodyParser = require("body-parser");
 // const cookieParser = require("cookie-parser");
 
 const app = express();
 const logger = require("morgan");
+app.use(forceHttps());
 
 app.use(logger("dev"));
 app.use(bodyParser.json());
