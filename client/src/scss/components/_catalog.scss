@@ -296,7 +296,7 @@
     padding: .5em 0;
     transition: all 0.5s ease-in;
     @include media(iphone-5) {
-      font-size: 1em;
+      font-size: .8em;
     }
     @include media(tablet) {
       font-size: 1.2em;
@@ -322,7 +322,7 @@
     text-align: center;
     padding: .5em 0;
     @include media(iphone-5) {
-      font-size: 1em;
+      font-size: .8em;
     }
     @include media(tablet) {
       font-size: 1.2em;
@@ -363,16 +363,22 @@
 
     .gallery-item {
       @include flex-display(flex, row, space-evenly, 100%);
-      border-bottom: 1px solid $text-black-m;
+      padding: 1em 0;
+
+      @include media(tablet) {
+        padding: 1em 0;
+        border-bottom: 1px solid $text-black-m;
+      }
+
       @include media(laptop) {
         @include flex-display(flex, column, space-evenly, 25%, center);
 
       }
       &:last-child {
         border-bottom: none;
-        padding-bottom: 3em;
+        //padding-bottom: 3em;
         @include media(laptop) {
-          padding-bottom: 0;
+          //padding-bottom: 0;
           border-bottom: 1px solid $text-black-m;
 
 
@@ -403,7 +409,7 @@
 ////// IMAGE GALLERY PRODUCTS STYLE incuding LANG TRANSLATED STYLES
 
 .gallery-item__title--fa {
-  @include flex-display(flex, column, space-around, 50%, center);
+  @include flex-display(flex, column, space-evenly, 50%, center);
   @include font-fam-size(1.1em, dovom, bold, $text-black-m);
   padding: 1em 0;
 
@@ -421,7 +427,7 @@
     //@include flex-display(flex, row, space-around, 100%);
     margin-bottom: 0.4em  ;
     .paver-key{
-      @include font-fam-size(0.8em, dovom, bold, $text-black-m);
+      @include font-fam-size(0.7em, dovom, bold, $text-black-m);
       margin: 2px;
       @include media(tablet) {
         font-size: 1em;
@@ -431,8 +437,10 @@
 
 
     .paver-value {
-      @include font-fam-size(1em, dovom, bold, $text-gray-m);
-
+      @include font-fam-size(.7em, dovom, bold, $text-gray-m);
+      @include media(tablet) {
+        font-size: 1em;
+      }
     }
   }
 }

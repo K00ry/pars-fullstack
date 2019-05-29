@@ -3,22 +3,32 @@ import Table from "./table";
 
 const TableWithPrice = props => {
   let correctTableHead;
-  props.check === "jadval"
-    ? (correctTableHead = (
+  console.log(props.check);
+ if( props.check === "jadval" ){
+      correctTableHead =
         <tr>
-          <th className="tg-6xid">{props.t("ship")}</th>
-          <th className="tg-4s02">{props.t("price")}</th>
+          {/*<th className="tg-6xid">{props.t("ship")}</th>*/}
+          {/*<th className="tg-4s02">{props.t("price")}</th>*/}
           <th>{props.t("sizes")}</th>
-        </tr>
-      ))
-    : (correctTableHead = (
-        <tr>
-          <th className="tg-6xid">{props.t("ship")}</th>
-          <th className="tg-4s02">{props.t("price")}</th>
-          <th>{props.t("sizes")}</th>
-          <th>{props.t("type")}</th>
-        </tr>
-      ));
+        </tr>;
+
+ } else if( props.check === "blook"){
+     correctTableHead =
+         <tr>
+             {/*<th className="tg-6xid">{props.t("ship")}</th>*/}
+             {/*<th className="tg-4s02">{props.t("price")}</th>*/}
+             <th>{props.t("sizes")}</th>
+             <th>{props.t("type")}</th>
+         </tr>;
+     } else {
+     correctTableHead =<tr>
+         {/*<th className="tg-6xid">{props.t("ship")}</th>*/}
+         {/*<th className="tg-4s02">{props.t("price")}</th>*/}
+         {/*<th>{props.t("sizes")}</th>*/}
+         <th>{props.t("type")}</th>
+     </tr>;
+ }
+
 
   return (
     <table className={`tg-${props.t("lang-class")}`}>
