@@ -1,6 +1,5 @@
 import React from "react";
 import Headroom from "react-headroom";
-// import { Link } from "react-router-dom";
 import NavMob from "./navMob";
 import NavDesk from "./navDesk";
 import { Consumer } from "../context";
@@ -12,11 +11,7 @@ const Toolbar = props => {
   return (
     <Consumer>
       {({ catalogMount, actions, mainData }) => {
-        // let langString;
-        // let lang = props.i18n.language;
-        // lang === "en" ? (lang = "fa") : (lang = "en");
-        // lang === "en" ? (langString = "English") : (langString = "فارسی");
-        // const toggle = lng => i18n.changeLanguage(lng);
+
         let position = catalogMount ? "inCatalog" : " ";
 
         return (
@@ -24,14 +19,6 @@ const Toolbar = props => {
               className={position}
           >
             <Headroom disableInlineStyles className="container-fluid">
-              {/*<div className="lang-select">*/}
-              {/*<span*/}
-              {/*className={`lang-select--${props.t("lang-class")}`}*/}
-              {/*onClick={() => toggle(lang)}*/}
-              {/*>*/}
-              {/*{langString}*/}
-              {/*</span>*/}
-              {/*</div>*/}
               {props.isMobile ? (
                 <NavMob t={props.t} click={actions.handleOpeningDrawer} />
               ) : (

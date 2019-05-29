@@ -418,16 +418,19 @@
   }
 
   .gallery-item__title_info--fa {
-    @include font-fam-size(0.8em, dovom, bold, $text-black-m);
-    margin: 2px;
-    @include media(tablet) {
-      font-size: 1em;
-    }
-    @include media(laptop) {
-      //font-size: 2em
+    //@include flex-display(flex, row, space-around, 100%);
+    margin-bottom: 0.4em  ;
+    .paver-key{
+      @include font-fam-size(0.8em, dovom, bold, $text-black-m);
+      margin: 2px;
+      @include media(tablet) {
+        font-size: 1em;
+      }
     }
 
-    span {
+
+
+    .paver-value {
       @include font-fam-size(1em, dovom, bold, $text-gray-m);
 
     }

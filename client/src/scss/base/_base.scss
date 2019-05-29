@@ -1,12 +1,3 @@
-body {
-    // padding-top: 75px; // background: url(../img/asset-3.png) no-repeat 100%;
-    // background-size: 100%;
-    //background-color: $background-White;
-
-
-
-}
-
 a:hover,
 a:focus {
     color: none;
@@ -23,21 +14,16 @@ a:focus {
 #map {
     height: 50vh;
 }
-.main{
-    position: relative;
-    svg{
-        position: absolute;
-        width: 100%;
-        height: 36%;
-    }
-    }
+//.main{
+//
+//    //svg{
+//    //    position: absolute;
+//    //    width: 100%;
+//    //    height: 36%;
+//    //}
+//    }
 
-///* Optional: Makes the sample page fill the window. */
-//html, body {
-//    height: 100%;
-//    margin: 0;
-//    padding: 0;
-//}
+
 
 
 
@@ -115,6 +101,33 @@ a:focus {
     transition: opacity 200ms;
 }
 
+.catalogs-appear{
+    opacity: 0;
+    z-index: 1;
+}
+.catalogs-appear.fade-appear-active{
+    opacity: 1;
+    transition: opacity 1000ms linear;
+}
+
+.catalogs-enter {
+    opacity: 0;
+    z-index: 1;
+}
+.catalogs-enter-active {
+    opacity: 1;
+    transition: opacity 1000ms linear;
+}
+.catalogs-exit {
+    opacity: 1;
+}
+.catalogs-exit-active {
+    opacity: 0;
+    transition: opacity 5000ms linear;
+}
+.catalogs-exit-done {
+    opacity: 0;
+}
 
 
 .slide-enter {

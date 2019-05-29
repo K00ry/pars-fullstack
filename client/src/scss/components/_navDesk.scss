@@ -22,7 +22,7 @@
 .nav-desk.farsi{
   @include flex-display(flex, row, space-between, 100%);
   flex-wrap: unset;
-  padding: 1em ;
+  padding: 1em 0;
   position: relative;
   background-color: transparent;
 
@@ -48,7 +48,7 @@
 
   }
 .dropdown-toggle{
-  @include font-fam-size(1.4em, asli, 400,$bademjoon-new );
+  @include font-fam-size(1.5em, asli, 400,$bademjoon-new );
   margin: auto;
   text-decoration: none;
   transition: all .2s ease-in-out;
@@ -85,7 +85,7 @@
 .nav-desk.english{
   @include flex-display(flex, row, space-between, 100%);
   flex-wrap: unset;
-  padding: 1em ;
+  padding: 1em 0;
   position: relative;
   background-color: transparent;
 
@@ -96,7 +96,7 @@
     .nav-item__a{
       margin: auto;
 
-      @include font-fam-size(.8em, Futura, 800,$bademjoon-new );
+      @include font-fam-size(1em, Futura, 400,$bademjoon-new );
 
       transition: all .2s ease-in-out;
       @include media(desktop) {
@@ -119,7 +119,7 @@
 
   }
   .dropdown-toggle{
-    @include font-fam-size(1.5em, Futura, bold,$bademjoon-new );
+    @include font-fam-size(1.5em, Futura, 400,$bademjoon-new );
     margin: auto;
     transition: all .2s ease-in-out;
 
@@ -143,7 +143,7 @@
 
 
     .dropdown-menu__a{
-      text-align: right;
+      text-align: left;
       padding-right: 1em;
       @include font-fam-size(1em, Futura, 400,$bademjoon-new );
       transition: all .2s ease-in-out;

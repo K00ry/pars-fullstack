@@ -10,7 +10,6 @@ import { Provider } from "./components/context";
 // import {Provider} from "react-redux";
 // import {createStore } from 'redux';
 // import reducer from "./components/store/reducers";
-
 // const store = createStore(reducer);
 
 ReactDOM.render(

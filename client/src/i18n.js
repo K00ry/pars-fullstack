@@ -1,10 +1,10 @@
 import i18n from "i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
+// import LanguageDetector from "i18next-browser-languagedetector";
 // import Backend from "i18next-locize-backend";
 // import React from "react";
 
 i18n
-    .use(LanguageDetector)
+    // .use(LanguageDetector)
     // .use(Backend)
     .init({
     // we init with resources
@@ -39,6 +39,7 @@ i18n
                 "پرس خشك":"Dry Press",
                 "دستی":"Handmade",
                 "سبك پوكه":"Light",
+                "سيمانی":"Cement",
                 "بلوك سيمانی":"Cement Block",
                 "ويبره":"Vibrated",
                 "واش بتن":"Washed",
@@ -561,7 +562,7 @@ i18n
             }
         }
     },
-    fallbackLng: "en",
+    fallbackLng: "fa",
     debug: false,
 
     // have a common namespace used around the full app

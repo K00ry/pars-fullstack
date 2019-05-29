@@ -1,26 +1,11 @@
 import React from "react";
 import { Consumer } from "../context";
-// import { Parallax } from "react-parallax";
-// import img from "../../img/khanabig.png";
 import HomeProducts from "./homeProducts";
 
-//
-// const insideStyles = {
-//   background: "transparent",
-//   padding: 20,
-//   position: "absolute",
-//   top: "50%",
-//   left: "50%",
-//   transform: "translate(-50%,-50%)"
-// };
 
 const MainContainer = props => (
   <Consumer>
     {({ mainData, CatalogSpec }) => {
-      // const small = process.env.PUBLIC_URL + "images/sizeset/new/intro-mob.jpg";
-      // const medium =
-      //   process.env.PUBLIC_URL + "images/sizeset/new/intro-tab.jpg";
-      // const large = process.env.PUBLIC_URL + "images/sizeset/new/intro-tab.jpg";
       const small_logo =
         process.env.PUBLIC_URL + "images/sizeset/new/intro-mob.png";
       const medium_logo =
@@ -66,17 +51,12 @@ const MainContainer = props => (
               );
             })}
           </div>
-          {/*<Parallax strength={280}>*/}
-          {/*<div className="parallax-my-custom-2">*/}
-          <div
-            // style={insideStyles}
-            className={`container overlaySection ${props.t("lang-class")}`}
-          >
-            {/*<img className="overlaySection__img" src={process.env.PUBLIC_URL + 'img/kamyon.jpg'}/>*/}
+
+          <div className={`container overlaySection ${props.t("lang-class")}`}>
+
             <div
               className="overlaySection__card"
-              data-scroll="centerVertical,toggle(.scaleDownIn, .scaleDownOut)"
-            >
+              data-scroll="centerVertical,toggle(.scaleDownIn, .scaleDownOut)">
               <h2 className="overlaySection__card--title">
                 {props.t("pars-title-footer")}
               </h2>
@@ -85,8 +65,6 @@ const MainContainer = props => (
               </p>
             </div>
           </div>
-          {/*</div>*/}
-          {/*</Parallax>*/}
         </div>
       );
     }}

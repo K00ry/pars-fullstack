@@ -41,7 +41,7 @@
 
       .english{
         margin:auto 0;
-        @include font-fam-size(1em,futura,600,$bademjoon-new);
+        @include font-fam-size(1em,futura,400,$bademjoon-new);
         line-height: 0;
         @include media(tablet) {
          font-size: 2em;

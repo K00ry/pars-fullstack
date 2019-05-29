@@ -1,8 +1,8 @@
 import React from "react";
-
 import TableWithPrice from "./tableWithPrice";
 import TableWithKg from "./tableWithKg";
 import TableWithModel from "./tableWithModel";
+
 
 const ImgAndTable = props => {
   let abbas;
@@ -21,7 +21,8 @@ const ImgAndTable = props => {
   }
 
   return (
-    <div className="group">
+
+
       <div className="table_wrapper">
         <div className="aks_table">
           <img
@@ -30,10 +31,9 @@ const ImgAndTable = props => {
             alt={props.imageAlt}
           />
         </div>
-
         {abbas}
       </div>
-    </div>
+
   );
 };
 

@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-// import {Redirect} from 'react-router-dom';
-
 import CatalogGenre from "./catalogGenre";
 import ImgAndTable from "./imgAndTable/imgAndTable";
 import ImgGallery from "./imgGallery/imgGallery";
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 // import CatalogGenreDesktop from "./catalogDesktop/catalogGenreDesktop";
 // import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-// import { CSSTransition } from 'react-transition-group';
+
 
 
 class Catalog extends Component {
   state = {
+
     subLinkClass: 1
   };
   // determine which sub category should be viewed
@@ -25,6 +25,7 @@ class Catalog extends Component {
   // get rid of extra space for navigation on header for UI purposes.
   componentDidMount() {
     this.props.mountToggle();
+
   }
   componentWillUnmount() {
     this.props.mountToggle();
@@ -56,6 +57,7 @@ class Catalog extends Component {
           tableSizes={this.state.ProdSpec.sizes}
           check={this.state.ProdSpec.genreEn}
           t={this.props.t}
+          appear={this.state.appear}
         />
       ) : (
         <ImgGallery
@@ -65,8 +67,10 @@ class Catalog extends Component {
         />
       );
 
+
+
     return (
-      <div className="main">
+      <div className={`mainCatalog`}>
         <div className="catalog-body container">
           {/*this component belongs only fo desktop view*/}
           {/*<CatalogGenreDesktop*/}
@@ -101,19 +105,23 @@ class Catalog extends Component {
               </ul>
             </div>
 
-            <div className="wrapper">
+            <TransitionGroup component="div" className="wrapper">
               {/*<ReactCSSTransitionGroup*/}
-                {/*transitionName="my-node-enter"*/}
-                {/*transitionEnterTimeout={500}*/}
-                {/*transitionLeaveTimeout={1}*/}
-                {/*component="div"*/}
+              {/*  transitionName="my-node"*/}
+              {/*  transitionEnterTimeout={1}*/}
+              {/*  transitionLeaveTimeout={1}*/}
+              {/*  component="div"*/}
               {/*>*/}
-              {/*<CSSTransition*/}
-                  {/*// in={inProp}*/}
-                  {/*timeout={100} classNames="my-node">*/}
+
+              <CSSTransition
+                  key={this.state.ProdSpec.genreId}
+                  // appear={true}
+                  timeout={300}
+                  classNames="page">
                 {galleryType}
-              {/*</CSSTransition>*/}
-            </div>
+              </CSSTransition>
+              {/*</ReactCSSTransitionGroup>*/}
+            </TransitionGroup>
           </div>
         </div>
       </div>

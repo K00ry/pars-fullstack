@@ -172,18 +172,15 @@
 
 
 .main {
+  position: relative;
   width: 100%;
   margin: auto;
   background: $background-White url("./svg/triangle6.svg") no-repeat bottom  ;
   background-size: cover;
-
-
-  //@include flex-display(flex,
-  //        column,
-  //        flex-start,
-  //        100%,
-  //        center);
-
+}
+.mainCatalog {
+  //background: none;
+  position: relative;
 }
 
 

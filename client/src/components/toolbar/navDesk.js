@@ -22,11 +22,6 @@ const NavDesk = props => {
           />
         </Link>
       </div>
-      {/*<Nav.Item>*/}
-      {/*<Link to="/" className="nav-item__a">*/}
-      {/*{props.t("sideNav-home")}*/}
-      {/*</Link>*/}
-      {/*</Nav.Item>*/}
       <NavDropdown  title={props.t("products")} id="nav-dropdown">
         {props.data.map((arr, index) => (
           <NavSubs

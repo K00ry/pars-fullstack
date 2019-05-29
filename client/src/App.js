@@ -2,8 +2,6 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { translate } from "react-i18next";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-
-
 import { Consumer } from "./components/context";
 import Toolbar from "./components/toolbar/toolbar";
 import Admin from "./components/admin/admin";
@@ -20,7 +18,7 @@ import Contact from "./components/contact/contact";
 
 const App = props => (
   <Consumer>
-    {({ actions, mainData }) => {
+    {({ actions, mainData,catalogMount }) => {
       const { t, i18n } = props;
 
       let catalogRouts = mainData.map((arr, i) => (

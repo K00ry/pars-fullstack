@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import ScrollTrigger from "scrolltrigger-classes";
+
 
 const ParsJadvalContext = React.createContext();
 
@@ -38,27 +38,13 @@ export class Provider extends Component {
     fetch("/main")
       .then(res => res.json())
       .then(response => {
-          console.log(response);
+          // console.log(response);
         this.setState({
           mainData: response,
           CatalogData: response[0],
           CatalogSpec: response[0][0]
         });
       });
-
-      // fetch("/test")
-      //     .then(res => res.json())
-      //     .then(response => {
-      //         console.log(response);
-      //     });
-
-
-
-    // document.addEventListener("DOMContentLoaded", function() {
-    //   new ScrollTrigger(
-    //       // {centerHorizontal:true}
-    //   );
-    // });
   }
 
   render() {
@@ -76,7 +62,6 @@ export class Provider extends Component {
             handleOpeningDrawer: this.openDrawer,
             handleCatalogState: this.catalogState,
             handleSlideDownSubNav: this.subNavToggle,
-
             t: this.props.t,
             i18n: this.props.i18n
           }
