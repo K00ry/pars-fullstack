@@ -1,5 +1,5 @@
 const express = require("express");
-// const forceHttps = require('@crystallize/elasticloadbalancer-express-force-https');
+const forceHttps = require('@crystallize/elasticloadbalancer-express-force-https');
 const path = require("path");
 const mainRoutes = require("./routes");
 const KerbStoneroutes = require("./routes/kerbStone");
@@ -17,7 +17,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 const logger = require("morgan");
-// app.use(forceHttps());
+app.use(forceHttps());
 
 app.use(logger("dev"));
 app.use(bodyParser.json());
@@ -72,9 +72,6 @@ app.use("/admin", Sites);
 app.use("/admin", Barriers);
 
 
-// app.get("/*", (req, res) => {
-//   res.sendFile(path.join(__dirname, 'client/build/index.html'));
-// });
 
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
