@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import axios from 'axios';
+
 
 
 const ParsJadvalContext = React.createContext();
@@ -10,7 +12,9 @@ export class Provider extends Component {
     CatalogData: [],
     CatalogSpec: [],
     catalogMount: false,
-    productSubNavOpen: false
+    productSubNavOpen: false,
+    token: localStorage.getItem("token") || "",
+      serverMessage: "",
   };
 
   // toggling the state of Side Drawer
@@ -33,6 +37,28 @@ export class Provider extends Component {
     });
   };
 
+    login = (userInfo) => {
+
+        return axios.post("/login", userInfo)
+            .then(response => {
+
+
+                if(response.data.status === 200){
+                const { token } = response.data;
+                localStorage.setItem("token", token);
+                this.setState({
+                    token
+                });
+                }
+                this.setState({
+                    serverMessage: "Sorry! your not an Admin."
+                });
+
+                console.log(response.data);
+                return response.data;
+            })
+    };
+
   // to fetch the main data from Express
   componentDidMount() {
     fetch("/main")
@@ -48,6 +74,7 @@ export class Provider extends Component {
   }
 
   render() {
+
     return (
       <ParsJadvalContext.Provider
         value={{
@@ -57,11 +84,14 @@ export class Provider extends Component {
           CatalogSpec: this.state.CatalogSpec,
           catalogMount: this.state.catalogMount,
           slidDownNav: this.state.productSubNavOpen,
+            token:this.state.token,
+            serverMessage:this.state.serverMessage,
 
           actions: {
             handleOpeningDrawer: this.openDrawer,
             handleCatalogState: this.catalogState,
             handleSlideDownSubNav: this.subNavToggle,
+            loginPass: this.login,
             t: this.props.t,
             i18n: this.props.i18n
           }
@@ -74,3 +104,24 @@ export class Provider extends Component {
 }
 
 export const Consumer = ParsJadvalContext.Consumer;
+
+ export const withContext = Component => {
+    return props => {
+        return (
+            <ParsJadvalContext.Consumer>
+                {
+                    globalState => {
+                        return (
+                            <Component
+                                {...globalState}
+                                {...props}
+                            />
+                        )
+                    }
+                }
+            </ParsJadvalContext.Consumer>
+        )
+    }
+};
+
+ // export default withRouter(withContext)

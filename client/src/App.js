@@ -1,8 +1,10 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { translate } from "react-i18next";
+// import { translate } from "react-i18next";
+import {  withTranslation} from 'react-i18next';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Consumer } from "./components/context";
+import ProtectedRoute from "./components/protected/protected"
 import Toolbar from "./components/toolbar/toolbar";
 import Admin from "./components/admin/admin";
 import SideDrawer from "./components/sidedrawer/sidedrawer";
@@ -15,6 +17,7 @@ import CatalogDownLoad from "./components/pages/catalogDownLoad";
 import Laboratory from "./components/pages/laboratory";
 import AboutUs from "./components/pages/aboutUs";
 import Contact from "./components/contact/contact";
+import Login from "./components/admin/login";
 
 const App = props => (
   <Consumer>
@@ -38,8 +41,10 @@ const App = props => (
       ));
 
       return (
+
         <Route
           render={({ location }) => (
+
             <div className="App">
               <Toolbar t={t} i18n={i18n} />
               <BackDrop />
@@ -60,10 +65,16 @@ const App = props => (
                       render={() => <MainContainer t={props.t} />}
                     />
                     <Route
-                      exact
-                      path="/admin"
-                      render={() => <Admin t={props.t} />}
+                        exact
+                        path="/Login"
+                        render={() => <Login t={props.t} />}
                     />
+                    <ProtectedRoute
+
+                      path="/admin"
+                      component={() => <Admin t={props.t} />}
+                    />
+
 
                     <Route
                       exact
@@ -95,13 +106,14 @@ const App = props => (
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>
-
+              <div className="bottom-section">
               <Contact t={props.t} />
               <footer className={`footer  ${props.t("lang-class")}`}>
                 <div className="container">
                   <h1>©{t("pars-title-footer")}</h1>
                 </div>
               </footer>
+              </div>
             </div>
           )}
         />
@@ -110,4 +122,5 @@ const App = props => (
   </Consumer>
 );
 
-export default translate("translations")(App);
+export default withTranslation()(App);
+// export default App;

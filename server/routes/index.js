@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const router = express.Router();
+const jwt = require("jsonwebtoken");
 const KerbSchema = require("../models/kerbStone").KerbStone;
 const BlockSchema = require("../models/blocks").Blocks;
 const PaversSchema = require("../models/pavers").Pavers;
@@ -12,6 +13,19 @@ const BarriersSchema = require("../models/barriers").Barriers;
 
 
 
+router.post("/login",(req,res)=>{
+
+  if(req.body.password===process.env.PASSWORD){
+    const token = jwt.sign(req.body.password, process.env.SECRET);
+    res.send({status:200,token:token})
+  }else{
+    res.send({status:401})
+
+  }
+
+
+
+});
 router.get("/main", (req, res) => {
 
   KerbSchema.find().exec((err, kerbs) =>{

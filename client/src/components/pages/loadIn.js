@@ -4,6 +4,7 @@ import { Parallax } from 'react-parallax';
 
 const insideStyles = {background: 'transparent', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
 const LoadIn = props =>{
+
     const small = process.env.PUBLIC_URL + 'images/load-in/original/mobile/load-2.jpg';
     const medium = process.env.PUBLIC_URL + 'images/load-in/original/load-2-1.jpg';
     const large = process.env.PUBLIC_URL + 'images/load-in/original/load-2-1.jpg';

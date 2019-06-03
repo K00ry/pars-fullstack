@@ -3,7 +3,7 @@ import Table from "./table";
 
 const TableWithPrice = props => {
   let correctTableHead;
-  console.log(props.check);
+
  if( props.check === "jadval" ){
       correctTableHead =
         <tr>
