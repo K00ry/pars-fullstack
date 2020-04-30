@@ -8,7 +8,7 @@
     "i18next": "^11.10.2",
     "i18next-browser-languagedetector": "^3.0.1",
     "i18next-locize-backend": "^1.9.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-addons-css-transition-group": "^15.6.2",
